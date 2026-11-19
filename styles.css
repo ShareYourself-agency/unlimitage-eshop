@@ -134,8 +134,8 @@ img{display:block;max-width:100%}
 .story p{margin:0;font-size:16px;line-height:1.7;opacity:.85;max-width:440px}
 /* ---------- sell strip ---------- */
 .sell{margin:10px 44px 90px;border-radius:30px;background:var(--cream);padding:60px 64px;display:flex;justify-content:space-between;align-items:center;gap:32px;flex-wrap:wrap;position:relative;overflow:hidden}
-.sell h3{margin:0 0 10px;font-weight:300;font-size:clamp(30px,3vw,42px)}
-.sell p{margin:0;color:var(--muted);font-size:16px;line-height:1.6;max-width:520px}
+.sell h3{margin:0 0 10px;font-weight:600;font-size:clamp(30px,3vw,42px);letter-spacing:-.02em}
+.sell{background:#D8C3A8}.sell p{margin:0;color:#4A3E33;font-size:16px;line-height:1.6;max-width:520px}
 /* ---------- footer ---------- */
 .foot{background:var(--deep);color:#E9DFD2;padding:70px 44px 30px}
 .foot .cols{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr 1.4fr;gap:32px;font-size:14px}
@@ -226,8 +226,8 @@ details p{margin:10px 0 0;font-size:14px;line-height:1.65;color:var(--muted)}
 .sv:hover{transform:translateY(-4px);background:var(--sand)}
 .sv .ico{width:48px;height:48px;border-radius:50%;background:#FFFFFF;display:flex;align-items:center;justify-content:center}
 .sv .ico svg{width:22px;height:22px;fill:none;stroke:var(--ink);stroke-width:1.4}
-.sv .big{font-weight:200;font-size:44px;line-height:1;letter-spacing:-.02em}
-.sv h3{margin:0;font-weight:400;font-size:20px}
+.sv .big{font-weight:500;font-size:44px;line-height:1;letter-spacing:-.03em}
+.sv h3{margin:0;font-weight:600;font-size:21px;letter-spacing:-.01em}
 .sv p{margin:0;font-size:14px;line-height:1.6;color:var(--muted);flex:1}
 .sv .more2{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;display:flex;gap:8px;align-items:center}
 .sv .more2 svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.6}

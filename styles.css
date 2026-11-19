@@ -169,7 +169,7 @@ img{display:block;max-width:100%}
 .prog{width:260px;height:2px;background:var(--line);position:relative}.prog i{position:absolute;left:0;top:0;bottom:0;width:38%;background:var(--ink)}
 /* ---------- product page ---------- */
 .crumbs{padding:6px 44px 22px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
-.pd{display:grid;grid-template-columns:96px minmax(0,1fr) 480px;gap:22px;padding:0 44px 80px;align-items:start}
+.pd{display:grid;grid-template-columns:84px minmax(0,560px) minmax(380px,500px);justify-content:center;gap:36px;padding:0 44px 80px;align-items:start}
 .thumbs{display:flex;flex-direction:column;gap:12px;position:sticky;top:20px}
 .thumbs button{padding:0;border:1px solid transparent;border-radius:12px;overflow:hidden;aspect-ratio:3/4;background:var(--sand);cursor:pointer}
 .thumbs button.on{border-color:var(--ink)}

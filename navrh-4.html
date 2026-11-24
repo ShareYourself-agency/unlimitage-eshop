@@ -55,7 +55,8 @@ img,video{display:block;max-width:100%}
 .pc.hide{display:none}
 
 .big{position:relative;height:110vh;min-height:640px;overflow:hidden;background:var(--beige)}
-.big video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.big .kb{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%;animation:kb 24s ease-in-out infinite alternate}
+@keyframes kb{from{transform:scale(1)}to{transform:scale(1.1)}}
 .big .ov{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:24px;color:#FFFFFF;background:linear-gradient(transparent 60%,rgba(0,0,0,.35))}
 .big h2{margin:0;font-weight:300;font-size:clamp(56px,10vw,170px);letter-spacing:-.05em;line-height:.9}
 .big .row{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;margin-top:18px;flex-wrap:wrap}
@@ -133,9 +134,7 @@ img,video{display:block;max-width:100%}
 </section>
 
 <section class="big" id="editorial">
-  <video autoplay muted loop playsinline preload="metadata" poster="https://www.unlimitage.com/wp-content/smush-avif/2025/09/D.J_PORTRET_09-scaled.jpg.avif">
-    <source src="https://videos.pexels.com/video-files/6649980/6649980-hd_2048_1080_25fps.mp4" type="video/mp4">
-  </video>
+  <img class="kb" src="https://www.unlimitage.com/wp-content/smush-avif/2025/09/D.J_PORTRET_09-scaled.jpg.avif" alt="Hermès Birkin v oranžové barvě" loading="lazy">
   <div class="ov">
     <h2 class="lo">druhý život<br>ikon</h2>
     <div class="row"><p>Každá kabelka už něco zažila. U nás dostane certifikát pravosti, péči a nového majitele, který ji ocení.</p><a class="pill lo" href="#shop">celá kolekce →</a></div>

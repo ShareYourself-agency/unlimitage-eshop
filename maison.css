@@ -40,7 +40,7 @@ svg.i{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.4}
 .pc{text-align:center;display:block}
 .pc .ph{position:relative;aspect-ratio:1/1.1;background:var(--tile);overflow:hidden;display:flex;align-items:center;justify-content:center}
 .pc .ph:before{content:'';position:absolute;left:18%;right:18%;bottom:11%;height:6%;border-radius:50%;background:radial-gradient(closest-side,rgba(60,30,15,.42),rgba(60,30,15,0));filter:blur(5px);transition:transform .9s var(--ease),opacity .9s}
-.pc img{position:relative;width:66%;height:68%;object-fit:contain;filter:drop-shadow(0 16px 14px rgba(60,30,15,.2));transition:transform .9s var(--ease)}
+.pc img{position:relative;width:76%;height:74%;object-fit:contain;filter:drop-shadow(0 16px 14px rgba(60,30,15,.2));transition:transform .9s var(--ease)}
 .pc:hover img{transform:translateY(-10px) scale(1.04)}
 .pc:hover .ph:before{transform:scale(.82);opacity:.6}
 .pc .go{position:absolute;left:0;right:0;bottom:0;padding:13px;background:rgba(17,17,17,.92);color:#FFFFFF;font-size:10.5px;transform:translateY(101%);transition:transform .5s var(--ease)}

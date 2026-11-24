@@ -28,28 +28,28 @@ img{display:block;max-width:100%}
 .hd svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:1.7}
 .ic{width:38px;height:38px;border-radius:50%;background:var(--bg);display:flex;align-items:center;justify-content:center}
 
-.top{position:relative;margin:16px 16px 0;height:46vh;min-height:340px;border-radius:24px;overflow:hidden}
+.top{position:relative;margin:16px 16px 0;height:34vh;min-height:260px;border-radius:24px;overflow:hidden}
 .top img{width:100%;height:100%;object-fit:cover;object-position:center 42%}
 .top .tag{position:absolute;left:50%;bottom:0;transform:translateX(-50%);background:var(--bg);border-radius:20px 20px 0 0;padding:16px 26px 0}
 
-.stage{position:relative;padding:20px 16px 0;min-height:86vh}
+.stage{position:relative;padding:20px 16px 0}
 .stage .row1{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;flex-wrap:wrap}
 .stage h2{margin:0;font-size:clamp(22px,2.2vw,34px);font-weight:700;letter-spacing:-.02em;text-transform:uppercase}
-.word{position:relative;margin-top:2vw;font-weight:800;font-size:27vw;line-height:.8;letter-spacing:-.065em;text-transform:uppercase;white-space:nowrap;user-select:none}
+.word{position:absolute;left:16px;right:16px;top:calc(3vw + 50px);font-weight:800;font-size:27vw;line-height:.8;letter-spacing:-.065em;text-transform:uppercase;white-space:nowrap;user-select:none}
 .word span{display:inline-block;transform:translateY(40px);opacity:0;transition:transform 1.2s cubic-bezier(.2,.7,.2,1),opacity 1.2s}
 .word.in span{transform:none;opacity:1}
 .fx{position:absolute;overflow:hidden;border-radius:14px;box-shadow:0 24px 60px rgba(0,0,0,.18);will-change:transform;background:#DDD}
 .fx img{width:100%;height:100%;object-fit:cover}
 .fx small{position:absolute;left:10px;bottom:10px;background:#FFFFFF;border-radius:999px;padding:6px 12px;font-weight:700;font-size:12px}
 .f1{left:46%;top:13vw;width:17vw;height:22vw}
-.f2{left:12%;top:26vw;width:15vw;height:18vw}
+.f2{left:20%;top:22vw;width:15vw;height:18vw}
 .f3{right:5%;top:30vw;width:18vw;height:13vw}
 .f4{left:68%;top:4vw;width:11vw;height:14vw}
 .badge{position:absolute;left:4%;top:9vw;width:150px;height:150px;border-radius:50%;background:var(--ink);color:#FFFFFF;display:flex;align-items:center;justify-content:center;z-index:5}
 .badge svg{position:absolute;inset:0;width:100%;height:100%;animation:rot 18s linear infinite}
 .badge b{font-size:13px;font-weight:700;letter-spacing:.04em}
 @keyframes rot{to{transform:rotate(360deg)}}
-.sub{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-top:-1vw;padding-bottom:40px;flex-wrap:wrap;position:relative;z-index:4}
+.sub{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-top:19vw;padding-bottom:40px;flex-wrap:wrap;position:relative;z-index:4}
 .sub p{margin:0;max-width:420px;font-size:17px;line-height:1.55;font-weight:500}
 
 .best{padding:100px 16px 0}
@@ -100,7 +100,7 @@ img{display:block;max-width:100%}
 .rv{opacity:0;transform:translateY(24px);transition:opacity 1s,transform 1s cubic-bezier(.2,.7,.2,1)}
 .rv.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv,.word span{opacity:1;transform:none}}
-@media (max-width:900px){.hd{grid-template-columns:auto 1fr;padding:8px 8px 8px 16px}.hd nav.l,.hd .q{display:none}.top{height:40vh;margin:12px 10px 0}.stage{min-height:0;padding:20px 10px 0}.word{font-size:30vw;margin-top:40px}.badge{width:104px;height:104px;top:auto;bottom:-10px;left:auto;right:10px}.f1{top:28vw;width:30vw;height:38vw;left:52%}.f2{top:44vw;width:26vw;height:30vw;left:8%}.f3,.f4{display:none}.stage .row1{gap:10px}.sub{margin-top:40vw}.best{padding:80px 10px 0}.cards{grid-template-columns:1fr 1fr}.pc:nth-child(n){margin-top:0}.promo{margin:80px 10px 0}.promo .t{left:22px;right:22px;bottom:26px}.how{grid-template-columns:1fr;padding:80px 10px 0}.ft{margin:80px 10px 10px;padding:40px 22px 0}.ft .c{grid-template-columns:1fr 1fr}.ft .c>div:first-child{grid-column:1/-1}}
+@media (max-width:900px){.hd{grid-template-columns:auto 1fr;padding:8px 8px 8px 16px}.hd nav.l,.hd .q{display:none}.top{height:40vh;margin:12px 10px 0}.stage{min-height:0;padding:20px 10px 0}.word{font-size:30vw;top:70px}.badge{width:104px;height:104px;top:auto;bottom:-10px;left:auto;right:10px}.f1{top:28vw;width:30vw;height:38vw;left:52%}.f2{top:44vw;width:26vw;height:30vw;left:8%}.f3,.f4{display:none}.stage .row1{gap:10px}.sub{margin-top:76vw}.best{padding:80px 10px 0}.cards{grid-template-columns:1fr 1fr}.pc:nth-child(n){margin-top:0}.promo{margin:80px 10px 0}.promo .t{left:22px;right:22px;bottom:26px}.how{grid-template-columns:1fr;padding:80px 10px 0}.ft{margin:80px 10px 10px;padding:40px 22px 0}.ft .c{grid-template-columns:1fr 1fr}.ft .c>div:first-child{grid-column:1/-1}}
 </style>
 </head>
 <body>
@@ -118,11 +118,11 @@ img{display:block;max-width:100%}
 <section class="stage" id="stage">
   <div class="row1"><h2>Ověřený luxus <span class="it">z&nbsp;Prahy</span></h2><a class="pill" href="#best">Všechny kousky</a></div>
   <div class="word" id="word"><span>I</span><span>k</span><span>o</span><span>n</span><span>y</span></div>
-  <a class="fx f1" data-s=".18" href="#best"><img src="https://www.unlimitage.com/wp-content/smush-avif/2026/11/IMG_4096-1536x2048.jpeg.avif" alt="Lady Dior Python"><small>Lady Dior · 95 000 Kč</small></a>
-  <a class="fx f2" data-s="-.12" href="#best"><img src="https://www.unlimitage.com/wp-content/smush-avif/2025/09/D.J_PORTRET_05.jpg.avif" alt="Hermès Birkin" style="object-position:center 60%"><small>Hermès Birkin</small></a>
-  <a class="fx f3" data-s=".1" href="#best"><img src="https://www.unlimitage.com/wp-content/uploads/2022/12/DSCF8293-2-scaled.webp" alt="Louis Vuitton Keepall"><small>LV Keepall</small></a>
-  <a class="fx f4" data-s="-.2" href="#best"><img src="https://www.unlimitage.com/wp-content/smush-avif/2026/11/IMG_3843-1536x2048.jpeg.avif" alt="Chanel Wallet on Chain"><small>Chanel</small></a>
-  <a class="badge" href="#best" aria-label="Katalog"><svg viewBox="0 0 150 150"><defs><path id="c" d="M75,75 m-56,0 a56,56 0 1,1 112,0 a56,56 0 1,1 -112,0"/></defs><text fill="#FFFFFF" font-size="12" font-weight="600" letter-spacing="3.2"><textPath href="#c">KATALOG · ENTRUPY · GARANCE · KATALOG · ENTRUPY ·</textPath></text></svg><b>↓</b></a>
+  <a class="fx f1" data-s=".05" href="#best"><img src="https://www.unlimitage.com/wp-content/smush-avif/2026/11/IMG_4096-1536x2048.jpeg.avif" alt="Lady Dior Python"><small>Lady Dior · 95 000 Kč</small></a>
+  <a class="fx f2" data-s="-.04" href="#best"><img src="https://www.unlimitage.com/wp-content/smush-avif/2025/09/D.J_PORTRET_05.jpg.avif" alt="Hermès Birkin" style="object-position:center 60%"><small>Hermès Birkin</small></a>
+  <a class="fx f3" data-s=".03" href="#best"><img src="https://www.unlimitage.com/wp-content/uploads/2022/12/DSCF8293-2-scaled.webp" alt="Louis Vuitton Keepall"><small>LV Keepall</small></a>
+  <a class="fx f4" data-s="-.06" href="#best"><img src="https://www.unlimitage.com/wp-content/smush-avif/2026/11/IMG_3843-1536x2048.jpeg.avif" alt="Chanel Wallet on Chain"><small>Chanel</small></a>
+  <a class="badge" href="#best" aria-label="Katalog"><svg viewBox="0 0 150 150"><defs><path id="c" d="M75,75 m-56,0 a56,56 0 1,1 112,0 a56,56 0 1,1 -112,0"/></defs><text fill="#FFFFFF" font-size="12" font-weight="600" letter-spacing="3.6"><textPath href="#c">KATALOG · ENTRUPY · GARANCE ·</textPath></text></svg><b>↓</b></a>
   <div class="sub"><p>Hermès, Chanel, Dior a Louis Vuitton s certifikátem pravosti. Kontrolujeme v butiku Na Příkopě a garantujeme zpětný odkup.</p><div style="display:flex;gap:10px;flex-wrap:wrap"><a class="pill f" href="#best">Nakupovat</a><a class="pill" href="#jak">Prodat kabelku</a></div></div>
 </section>
 

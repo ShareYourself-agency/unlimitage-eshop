@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;800&family=Fraunces:opsz,wght,SOFT@9..144,500,100&family=Libre+Caslon+Text:wght@700&display=swap" rel="stylesheet">
 <style>
-:root{--ink:#1C1D21;--muted:#62646B;--grey:#EDEDED;--soft:#F5F5F5;--bx:#5A0C18;--pink:#F6DCE6;--line:#DADADA;--w:1226px}
+:root{--ink:#1C1D21;--muted:#62646B;--grey:#ECEAE7;--soft:#F5F4F2;--bx:#3B2A20;--sand:#E8DCCB;--line:#DADADA;--w:1226px}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:#FFFFFF;color:var(--ink);font-family:'Archivo',system-ui,sans-serif;font-size:14px;-webkit-font-smoothing:antialiased}
@@ -27,12 +27,13 @@ img{display:block;max-width:100%}
 .logo b{font-family:'Libre Caslon Text',serif;font-weight:700;font-size:19px}
 .logo i{font-style:normal;font-family:'Libre Caslon Text',serif;font-weight:700;font-size:6.5px;letter-spacing:.18em;margin-top:3px}
 svg.i{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.5}
+.cut{object-fit:contain;filter:drop-shadow(0 18px 16px rgba(30,18,10,.26))}
 
 .tb{background:var(--ink);color:#FFFFFF;display:grid;grid-template-columns:1fr auto 1fr;align-items:stretch;font-size:12px;height:34px}
 .tb>*{display:flex;align-items:center}
 .tb .l{padding-left:max(24px,calc((100vw - var(--w))/2 + 24px))}
 .tb .r{justify-content:flex-end}
-.tb .sell{background:var(--pink);color:var(--ink);font-weight:600;letter-spacing:.06em;padding:0 34px;height:100%;display:flex;align-items:center}
+.tb .sell{background:var(--sand);color:var(--ink);font-weight:600;letter-spacing:.06em;padding:0 34px;height:100%;display:flex;align-items:center}
 .hd{position:sticky;top:0;z-index:40;background:#FFFFFF;border-bottom:1px solid #EEE}
 .hd .wrap{display:flex;align-items:center;gap:34px;height:82px}
 .hd nav{display:flex;gap:26px;font-size:13.5px}
@@ -41,12 +42,16 @@ svg.i{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.5}
 .hd .ic{margin-left:auto;display:flex;gap:18px}
 
 .hero{background:var(--grey);overflow:hidden}
-.hero .wrap{display:grid;grid-template-columns:1fr 1.25fr .8fr;align-items:center;gap:20px;height:calc(100vh - 116px);min-height:560px;max-height:760px}
-.hero h1{margin:0;font-weight:800;font-size:clamp(54px,7vw,104px);line-height:.95;letter-spacing:-.02em;text-transform:uppercase}
-.hero .cmp{position:relative;height:100%}
-.hero .cmp{align-self:stretch}
-.hero .cmp img{position:absolute;left:6%;right:6%;top:7%;bottom:0;width:88%;height:93%;object-fit:cover;object-position:center 40%}
-.hero .rt{justify-self:end;text-align:right}
+.hero .wrap{display:grid;grid-template-columns:1fr 1.3fr .8fr;align-items:center;gap:10px;height:calc(100vh - 116px);min-height:560px;max-height:780px}
+.hero h1{margin:0;font-weight:800;font-size:clamp(54px,6.6vw,100px);line-height:.95;letter-spacing:-.02em;text-transform:uppercase;position:relative;z-index:2}
+.hero .cmp{position:relative;align-self:stretch}
+.hero .cmp img{position:absolute}
+.hero .mdl{left:50%;bottom:0;height:97%;width:auto;max-width:none;transform:translateX(-50%)}
+.hero .b1{left:-9%;top:22%;width:38%;animation:fl 8s ease-in-out infinite}
+.hero .b2{left:-4%;bottom:3%;width:32%;animation:fl 9s ease-in-out -3s infinite}
+.hero .b3{right:-10%;bottom:6%;width:34%;animation:fl 10s ease-in-out -5s infinite}
+@keyframes fl{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+.hero .rt{justify-self:end;text-align:right;position:relative;z-index:2}
 .hero .rt p{margin:0 0 14px;font-weight:500;font-size:15px}
 .code{display:inline-block;background:var(--ink);color:#FFFFFF;border-radius:999px;padding:4px 12px;font-weight:600;font-size:13px;margin-left:6px}
 .hero small{display:block;margin-top:14px;font-size:11px;color:var(--muted)}
@@ -58,16 +63,14 @@ svg.i{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.5}
 .cg .ph{aspect-ratio:1.38;border-radius:4px;overflow:hidden;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
 .cg a:nth-child(3n+1) .ph{background:var(--bx)}
 .cg a:nth-child(3n+2) .ph{background:var(--soft)}
-.cg a:nth-child(3n) .ph{background:var(--pink)}
-.cg .ph b{font-family:'Fraunces',serif;font-weight:500;font-variation-settings:'SOFT' 100;font-size:clamp(17px,1.5vw,22px);letter-spacing:.01em;text-align:center;padding:0 10px;transition:transform .5s cubic-bezier(.2,.7,.2,1)}
-.cg a:nth-child(3n+1) .ph{color:#FFFFFF}
-.cg a:nth-child(3n) .ph{color:var(--bx)}
-.cg a:hover .ph b{transform:scale(1.06)}
+.cg a:nth-child(3n) .ph{background:var(--sand)}
+.cg img{width:66%;height:80%;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.cg a:hover img{transform:scale(1.07) rotate(-2deg)}
 
-.ban{background:var(--bx);color:#FFFFFF}
+.ban{background:var(--bx);color:#FFFFFF;overflow:hidden}
 .ban .wrap{display:grid;grid-template-columns:1fr 1fr;align-items:center;min-height:330px}
-.ban .ph{align-self:stretch;position:relative;overflow:hidden;margin-left:-24px}
-.ban .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 35%;mask-image:linear-gradient(90deg,#000 70%,transparent);-webkit-mask-image:linear-gradient(90deg,#000 70%,transparent)}
+.ban .ph{align-self:stretch;position:relative;margin-left:-24px}
+.ban .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%;mask-image:linear-gradient(90deg,transparent,#000 12%,#000 70%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 70%,transparent)}
 .ban .t{text-align:center;padding:50px 20px}
 .ban h2{margin:0 0 10px;font-size:clamp(30px,2.8vw,40px)}
 .ban .k{font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-size:14px}
@@ -76,37 +79,31 @@ svg.i{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.5}
 .fc{padding:76px 0 0}
 .fc h2{margin:0 0 26px;font-size:20px;color:var(--bx)}
 .g3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.g2{display:grid;grid-template-columns:1fr 1fr;gap:24px}
-.tile .ph{aspect-ratio:.955;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:64px}
+.tile .ph{position:relative;aspect-ratio:.955;overflow:hidden;display:flex;align-items:center;justify-content:center}
 .g2 .tile .ph{aspect-ratio:1.24}
 .tile .ph>img.e{width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
 .tile:hover .ph>img.e{transform:scale(1.04)}
-.tile .duo{position:relative;width:100%;height:100%}
-.tile .duo img{position:absolute;object-fit:contain;filter:drop-shadow(0 20px 18px rgba(0,0,0,.28))}
-.tile .duo img:first-child{left:8%;bottom:14%;width:52%;height:52%}
-.tile .duo img:last-child{right:6%;top:16%;width:50%;height:56%}
-.tile .duo img.fb{position:absolute;inset:0;width:100%;height:100%;left:0;top:0;right:0;bottom:0;object-fit:cover;filter:none}
-.tile .duo img.fb+img.fb{display:none}
+.tile .duo img{position:absolute;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.tile .duo img:first-child{left:7%;bottom:12%;width:50%;height:50%}
+.tile .duo img:last-child{right:6%;top:13%;width:48%;height:58%}
+.tile:hover .duo img:first-child{transform:translate(-2%,1%)}
+.tile:hover .duo img:last-child{transform:translate(2%,-2%)}
 .tile h3{margin:22px 0 10px;font-weight:500;font-size:16px}
 .tile p{margin:0 0 8px;font-size:14.5px}
-.tile .ty{flex-direction:column;gap:10px;text-align:center}
-.tile .ty small{font-size:14px;letter-spacing:.08em;text-transform:uppercase}
-.tile .ty b{font-family:'Fraunces',serif;font-weight:500;font-variation-settings:'SOFT' 100;font-size:clamp(40px,4.4vw,68px);line-height:1;letter-spacing:-.02em;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
-.tile .pk.ty{color:var(--bx)}
-.tile:hover .ty b{transform:scale(1.04)}
-.bx{background:var(--bx)}.pk{background:var(--pink)}.sf{background:var(--soft)}
+.bx{background:var(--bx)}.sd{background:var(--sand)}.sf{background:var(--soft)}
+.gift{color:#FFFFFF;flex-direction:column;gap:14px}
+.gift span{font-size:22px;font-weight:500}
 
 .band{background:var(--soft);margin-top:64px;display:grid;grid-template-columns:1.3fr 1fr;align-items:center;min-height:300px}
+.band.rv2{grid-template-columns:1fr 1.15fr}
 .band .t{text-align:center;padding:40px 30px}
 .band .k{letter-spacing:.08em;text-transform:uppercase;font-size:14px}
 .band h3{margin:6px 0 16px;font-weight:500;font-size:23px}
 .band p{margin:0 0 20px;font-size:14px}
 .band small{display:block;margin-top:18px;font-size:11.5px;color:var(--muted)}
-.band .ph{height:100%;min-height:300px;position:relative;overflow:hidden}
+.band .ph{align-self:stretch;min-height:340px;position:relative;overflow:hidden}
 .band .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-
-.gift{color:#FFFFFF;flex-direction:column;gap:14px}
-.gift span{font-size:22px;font-weight:500}
 
 .rail-h{margin:70px 0 26px}
 .rail-h h3{margin:0 0 8px;font-weight:500;font-size:16px}
@@ -114,26 +111,24 @@ svg.i{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.5}
 .rail{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:6px}
 .rail::-webkit-scrollbar{display:none}
 .pc{flex:0 0 calc((100% - 90px)/6);scroll-snap-align:start;text-align:center;position:relative}
-.pc .ph{aspect-ratio:1;overflow:hidden;background:var(--soft)}
-.pc .ph img{width:100%;height:100%;object-fit:cover;object-position:center 58%;filter:grayscale(1) contrast(1.06) brightness(1.04);transform:scale(1.12);transition:filter .6s,transform .8s cubic-bezier(.2,.7,.2,1)}
-.pc:hover .ph img{filter:none;transform:scale(1.17)}
-.pc .hr{position:absolute;right:4px;top:4px;display:flex;align-items:center;gap:4px;background:#FFFFFF;border:0;border-radius:999px;padding:4px 8px;font:inherit;font-size:11px;cursor:pointer}
-.pc .hr svg{width:14px;height:14px;fill:none;stroke:var(--ink);stroke-width:1.5}
+.pc .ph{aspect-ratio:1;display:flex;align-items:center;justify-content:center}
+.pc .ph img{width:82%;height:82%;object-fit:contain;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.pc:hover .ph img{transform:scale(1.07)}
+.pc .hr{position:absolute;right:4px;top:4px;background:#FFFFFF;border:0;border-radius:999px;padding:5px 7px;cursor:pointer}
+.pc .hr svg{display:block;width:15px;height:15px;fill:none;stroke:var(--ink);stroke-width:1.5}
 .pc .hr.on svg{fill:var(--bx);stroke:var(--bx)}
 .pc .br{margin-top:12px;font-weight:600;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase}
 .pc .nm{margin-top:5px;font-size:14px;line-height:1.3;min-height:36px}
 .pc .cd{margin-top:8px;font-size:12px;color:var(--muted)}
 .pc .pr{margin-top:12px;font-weight:600;font-size:14.5px}
 .pc .ch{display:inline-block;margin-top:6px;background:#E6F3E4;color:#22601F;font-size:11px;padding:2px 6px;border-radius:2px}
-.nxt{position:absolute;right:-8px;top:34%;width:32px;height:32px;border-radius:50%;background:var(--ink);color:#FFFFFF;border:0;cursor:pointer;font-size:16px}
+.nxt{position:absolute;right:-8px;top:30%;width:32px;height:32px;border-radius:50%;background:var(--ink);color:#FFFFFF;border:0;cursor:pointer;font-size:16px}
 
 .ref{background:var(--grey);margin-top:60px;overflow:hidden}
-.ref .wrap{display:grid;grid-template-columns:1fr 1.2fr;align-items:center;min-height:330px}
+.ref .wrap{display:grid;grid-template-columns:1fr 1.2fr;align-items:center;min-height:340px}
 .ref .ph{position:relative;align-self:stretch}
-.ref .ph img{position:absolute;left:8%;bottom:-8%;width:74%;height:104%;object-fit:contain;transform:rotate(-8deg);filter:drop-shadow(0 30px 30px rgba(0,0,0,.2))}
-.ref .ph img.fb{left:0;bottom:0;width:100%;height:100%;object-fit:cover;transform:none;filter:none}
-.ref .big{display:flex;align-items:center;justify-content:center}
-.ref .big b{font-weight:800;font-size:clamp(80px,9vw,150px);letter-spacing:-.04em;line-height:1;color:var(--ink);white-space:nowrap}
+.ref .box{position:absolute;left:10%;bottom:-34%;width:64%;aspect-ratio:1;background:#FFFFFF;transform:rotate(-14deg);box-shadow:0 30px 60px rgba(0,0,0,.12)}
+.ref .ph img{position:absolute;left:18%;bottom:-6%;width:52%;height:96%;transform:rotate(-10deg)}
 .ref .t{text-align:center;padding:50px 20px}
 .ref .k{letter-spacing:.08em;text-transform:uppercase;font-size:14px}
 .ref h3{margin:10px 0 14px;font-weight:500;font-size:23px}
@@ -157,8 +152,10 @@ svg.i{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.5}
 .ft input{flex:1;min-width:0;background:transparent;border:0;color:#FFFFFF;font:inherit;padding:11px 12px;outline:none}
 .ft button{background:transparent;border:0;border-left:1px solid #777;color:#FFFFFF;width:40px;cursor:pointer;font-size:16px}
 .ft .so{display:flex;gap:14px;font-size:12px}
-@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
-@media (max-width:980px){.tb{grid-template-columns:1fr auto}.tb .l{display:none}.tb .m{padding-left:16px}.hd .wrap{height:64px;gap:16px}.hd nav{display:none}.hero .wrap{grid-template-columns:1fr;height:auto;max-height:none;padding-top:34px;padding-bottom:34px;gap:10px}.hero .cmp{height:340px}.hero .rt{justify-self:start;text-align:left}.cg{grid-template-columns:repeat(3,1fr);gap:14px}.ban .wrap{grid-template-columns:1fr}.ban .ph{min-height:260px;margin-right:-24px}.ban .ph img{mask-image:none;-webkit-mask-image:none}.g3,.g2{grid-template-columns:1fr;gap:34px}.band{grid-template-columns:1fr}.pc{flex-basis:44%}.nxt{display:none}.ref .wrap{grid-template-columns:1fr}.ref .ph{min-height:200px}.info .wrap{grid-template-columns:1fr}.info div{border-right:0;border-bottom:1px solid var(--line)}.ft .wrap{grid-template-columns:1fr 1fr}.ft .wrap>div:first-child{grid-column:1/-1}}
+.rv{opacity:0;transform:translateY(18px);transition:opacity .8s,transform .8s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+@media (max-width:980px){.tb{grid-template-columns:1fr auto}.tb .l{display:none}.tb .m{padding-left:16px}.hd .wrap{height:64px;gap:16px}.hd nav{display:none}.hero .wrap{grid-template-columns:1fr;height:auto;max-height:none;padding-top:34px;padding-bottom:0;gap:14px}.hero .cmp{height:420px;order:3}.hero .rt{justify-self:start;text-align:left}.cg{grid-template-columns:repeat(3,1fr);gap:14px}.ban .wrap{grid-template-columns:1fr}.ban .ph{min-height:260px;margin-right:-24px}.g3,.g2{grid-template-columns:1fr;gap:34px}.band,.band.rv2{grid-template-columns:1fr}.pc{flex-basis:44%}.nxt{display:none}.ref .wrap{grid-template-columns:1fr}.ref .ph{min-height:280px}.info .wrap{grid-template-columns:1fr}.info div{border-right:0;border-bottom:1px solid var(--line)}.ft .wrap{grid-template-columns:1fr 1fr}.ft .wrap>div:first-child{grid-column:1/-1}}
 </style>
 </head>
 <body>
@@ -171,37 +168,49 @@ svg.i{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.5}
 
 <section class="hero"><div class="wrap">
   <h1>Ověřený<br>luxus<br>z Prahy</h1>
-  <div class="cmp"><img src="https://www.unlimitage.com/wp-content/smush-avif/2025/09/D.J_PORTRET_05.jpg.avif" alt="Hermès Birkin s hedvábným šátkem"></div>
+  <div class="cmp"><img class="mdl" src="img/m-09.webp" alt="Hermès Birkin v oranžové barvě"><img class="cut b1" src="img/c-3843.webp" alt="Chanel Wallet on Chain"><img class="cut b2" src="img/c-6755.webp" alt="Fendi Peekaboo"><img class="cut b3" src="img/c-4096.webp" alt="Lady Dior Python"></div>
   <div class="rt"><p>Trade-in s bonusem <span class="code">+10 %</span></p><a class="btn d" href="#nove">Nakupovat</a><small>Bonus platí při výměně kabelky za kredit.</small></div>
 </div></section>
 
 <section class="cats" id="znacky"><div class="wrap">
   <h2 class="ds">Nakupujte podle značky</h2>
   <p>Každý kousek s certifikátem <b>Entrupy</b> a kontrolou v butiku.</p>
-  <div class="cg" id="cg"></div>
+  <div class="cg">
+    <a href="#nove"><div class="ph"><img class="cut" src="img/c-6990.webp" alt="" loading="lazy"></div><span class="ul">Louis Vuitton</span></a>
+    <a href="#nove"><div class="ph"><img class="cut" src="img/c-3843.webp" alt="" loading="lazy"></div><span class="ul">Chanel</span></a>
+    <a href="#nove"><div class="ph"><img class="cut" src="img/c-4096.webp" alt="" loading="lazy"></div><span class="ul">Christian Dior</span></a>
+    <a href="#nove"><div class="ph"><img class="cut" src="img/c-4061.webp" alt="" loading="lazy"></div><span class="ul">Gucci</span></a>
+    <a href="#nove"><div class="ph"><img class="cut" src="img/c-6755.webp" alt="" loading="lazy"></div><span class="ul">Fendi</span></a>
+    <a href="#nove"><div class="ph"><img class="cut" src="img/c-4031.webp" alt="" loading="lazy"></div><span class="ul">Novinky</span></a>
+  </div>
 </div></section>
 
 <section class="ban" id="prodat"><div class="wrap">
-  <div class="ph"><img src="https://www.unlimitage.com/wp-content/smush-avif/2025/09/Untitled-design-12.png.avif" alt="Hermès Birkin a Louis Vuitton Keepall" loading="lazy"></div>
+  <div class="ph"><img src="img/e-three.webp" alt="Hermès Birkin a Louis Vuitton Keepall" loading="lazy"></div>
   <div class="t"><h2 class="ds">Vaše kabelka má hodnotu</h2><div class="k">Nabídka do 48 hodin</div><p>Výkup, komise nebo výměna. Stačí poslat fotky.</p><a class="btn w" href="https://wa.me/420773155173" target="_blank" rel="noopener">Ocenit kabelku</a></div>
 </div></section>
 
 <section class="fc"><div class="wrap">
   <h2 class="ds">Vybrané kolekce</h2>
   <div class="g3">
-    <a class="tile" href="#nove"><div class="ph sf"><img class="e" src="https://www.unlimitage.com/wp-content/smush-avif/2024/11/780C761C-3033-4198-8866-0766706E2C85-1920x2880-1-scaled.jpeg.avif" alt="Kabelky Hermès Kelly" loading="lazy" style="object-position:center 45%"></div><h3>Investiční kousky</h3><p>Birkin, Kelly a Lady Dior, které drží hodnotu.</p><span class="ul">Zobrazit výběr</span></a>
-    <a class="tile" href="#nove"><div class="ph pk ty"><small>Kabelky do</small><b>20 000 Kč</b></div><h3>První luxusní kabelka</h3><p>Nemusí stát jmění. Louis Vuitton už od 12 500 Kč.</p><span class="ul">Zobrazit kabelky</span></a>
-    <a class="tile" href="#nove"><div class="ph sf"><img class="e" src="https://www.unlimitage.com/wp-content/uploads/2022/12/DSCF8293-2-scaled.webp" alt="Louis Vuitton Keepall" loading="lazy" style="object-position:62% center"></div><h3>Na cesty</h3><p>Keepall a cestovní klasiky Louis Vuitton.</p><span class="ul">Zobrazit cestovní tašky</span></a>
+    <a class="tile rv" href="#nove"><div class="ph bx"><div class="duo"><img class="cut" src="img/c-4061.webp" alt="" loading="lazy"><img class="cut" src="img/c-4098.webp" alt="" loading="lazy"></div></div><h3>Investiční kousky</h3><p>Birkin, Kelly a Lady Dior, které drží hodnotu.</p><span class="ul">Zobrazit výběr</span></a>
+    <a class="tile rv" href="#nove"><div class="ph sf"><img class="e" src="img/e-kelly.webp" alt="Kabelky Hermès Kelly" loading="lazy" style="object-position:center 45%"></div><h3>Hermès na zakázku</h3><p>Najdeme konkrétní model, barvu i kování.</p><span class="ul">Poslat poptávku</span></a>
+    <a class="tile rv" href="#nove"><div class="ph sd"><div class="duo"><img class="cut" src="img/c-6990.webp" alt="" loading="lazy"><img class="cut" src="img/c-6767.webp" alt="" loading="lazy" style="height:44%;top:16%"></div></div><h3>Kabelky do 20 000 Kč</h3><p>První luxusní kabelka nemusí stát jmění.</p><span class="ul">Zobrazit kabelky</span></a>
   </div>
 
-  <div class="band">
+  <div class="band rv">
     <div class="t"><div class="k">Jistota při nákupu</div><h3>Garance zpětného odkupu</h3><p>Vybrané kousky od vás odkoupíme zpět do 12 měsíců za předem danou cenu.</p><a class="btn d" href="#nove">Zobrazit kousky s garancí</a><small>Podmínky garance najdete u každého produktu.</small></div>
-    <div class="ph"><img src="https://www.unlimitage.com/wp-content/uploads/2022/12/DSCF8101-2-scaled.webp" alt="Kontrola pravosti" loading="lazy"></div>
+    <div class="ph"><img src="img/e-check.webp" alt="Kontrola pravosti" loading="lazy"></div>
   </div>
 
-  <div class="g2" style="margin-top:64px">
-    <a class="tile" href="#"><div class="ph sf ty"><small>Butik</small><b>Na Příkopě 23</b></div><h3>Butik Na Příkopě</h3><p>Přijďte si kabelku vyzkoušet. Po–So 11–17.</p><span class="ul">Rezervovat prohlídku</span></a>
-    <a class="tile" href="#"><div class="ph bx gift"><span class="logo"><b>UNLIMITAGE</b><i>PRAGUE</i></span><span>Dárkový poukaz</span></div><h3>Dárkový poukaz</h3><p>Ať si vybere sama.</p><span class="ul">Darovat poukaz</span></a>
+  <div class="g2">
+    <a class="tile rv" href="#"><div class="ph sf"><img class="e" src="img/e-birkin.webp" alt="Hermès Birkin se šátkem" loading="lazy" style="object-position:center 42%"></div><h3>Butik Na Příkopě</h3><p>Přijďte si kabelku vyzkoušet. Po–So 11–17.</p><span class="ul">Rezervovat prohlídku</span></a>
+    <a class="tile rv" href="#"><div class="ph bx gift"><span class="logo"><b>UNLIMITAGE</b><i>PRAGUE</i></span><span>Dárkový poukaz</span></div><h3>Dárkový poukaz</h3><p>Ať si vybere sama.</p><span class="ul">Darovat poukaz</span></a>
+  </div>
+
+  <div class="band rv2 rv">
+    <div class="ph"><img src="img/e-keepall.webp" alt="Louis Vuitton Keepall v ulicích Prahy" loading="lazy" style="object-position:60% center"></div>
+    <div class="t"><h3>Cestovní klasiky</h3><p>Keepall a tašky, které vydrží generace.</p><a class="btn d" href="#nove">Nakupovat</a></div>
   </div>
 
   <div class="rail-h" id="nove"><h3>Nově naskladněno</h3><span>Každý kousek je jen jeden. <a class="ul" style="font-size:14px" href="#">Zobrazit vše</a></span></div>
@@ -209,7 +218,7 @@ svg.i{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.5}
 </div></section>
 
 <section class="ref"><div class="wrap">
-  <div class="ph big"><b>+10 %</b></div>
+  <div class="ph"><span class="box"></span><img class="cut" src="img/c-4099.webp" alt="" loading="lazy"></div>
   <div class="t"><div class="k">Nechcete se vázat?</div><h3>Vyměňte ji za jinou</h3><p>Kupte, noste a až vás přestane bavit, vyměňte ji u nás za další. Při výměně za kredit přidáme 10 % navíc.</p><div class="b"><a class="btn d" href="#nove">Nakupovat</a><a class="btn o" href="#prodat">Vyměnit kabelku</a></div></div>
 </div></section>
 
@@ -228,17 +237,15 @@ svg.i{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.5}
 </div></footer>
 <script>
 (function(){
-var W='https://www.unlimitage.com/wp-content/smush-avif/2026/11/IMG_',S='-1536x2048.jpeg.avif';
-var C=[['Hermès','24 kousků'],['Chanel','31 kousků'],['Louis Vuitton','58 kousků'],['Christian Dior','27 kousků'],['Gucci','19 kousků'],['Cartier & Rolex','14 kousků']];
-document.getElementById('cg').innerHTML=C.map(function(c){return '<a href="#nove"><div class="ph"><b>'+c[0]+'</b></div><span class="ul">'+c[1]+'</span></a>'}).join('');
-var P=[['4096','Christian Dior','Lady Dior Python Multicolor','95 000 Kč','Jako nový'],['3843','Chanel','Classic Wallet on Chain Red','39 900 Kč','Výborný'],['6755','Fendi','Mini Peekaboo Black','37 000 Kč','Výborný'],['4031','Gucci','GG Marmont Chevron Dusty Pink','32 500 Kč','Výborný'],['3984','Christian Dior','Book Tote Houndstooth','34 000 Kč','Velmi dobrý'],['4061','Gucci','GG Marmont Cream','28 500 Kč','Výborný'],['6767','Louis Vuitton','Monogram Pochette Voyage MM','19 000 Kč','Velmi dobrý'],['6990','Louis Vuitton','Monogram Mini Pochette','12 500 Kč','Vintage']];
+var P=[['4096','Christian Dior','Lady Dior Python Multicolor','95 000 Kč','Jako nový'],['3843','Chanel','Classic Wallet on Chain Red','39 900 Kč','Výborný'],['6755','Fendi','Mini Peekaboo Black','37 000 Kč','Výborný'],['4031','Gucci','GG Marmont Chevron Dusty Pink','32 500 Kč','Výborný'],['4061','Gucci','GG Marmont Cream','28 500 Kč','Výborný'],['6767','Louis Vuitton','Monogram Pochette Voyage MM','19 000 Kč','Velmi dobrý'],['6990','Louis Vuitton','Monogram Mini Pochette','12 500 Kč','Vintage']];
 var H='<svg viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg>';
 var rail=document.getElementById('rail');
-rail.innerHTML=P.map(function(p){return '<a class="pc" href="#"><div class="ph"><img loading="lazy" src="'+W+p[0]+S+'" alt="'+p[1]+' '+p[2]+'"></div><button type="button" class="hr" aria-label="Uložit">'+H+'</button><div class="br">'+p[1]+'</div><div class="nm">'+p[2]+'</div><div class="cd">Stav: '+p[4]+'</div><div class="pr">'+p[3]+'</div><span class="ch">Ověřeno Entrupy</span></a>'}).join('');
+rail.innerHTML=P.map(function(p){return '<a class="pc" href="#"><div class="ph"><img loading="lazy" src="img/c-'+p[0]+'.webp" alt="'+p[1]+' '+p[2]+'"></div><button type="button" class="hr" aria-label="Uložit">'+H+'</button><div class="br">'+p[1]+'</div><div class="nm">'+p[2]+'</div><div class="cd">Stav: '+p[4]+'</div><div class="pr">'+p[3]+'</div><span class="ch">Ověřeno Entrupy</span></a>'}).join('');
 document.getElementById('nx').onclick=function(){var m=rail.scrollWidth-rail.clientWidth;rail.scrollTo({left:rail.scrollLeft>m-10?0:rail.scrollLeft+rail.clientWidth*.6,behavior:'smooth'})};
 document.addEventListener('click',function(e){var h=e.target.closest('.hr');if(h){e.preventDefault();h.classList.toggle('on')}});
-document.querySelectorAll('img[data-fb]').forEach(function(i){function f(){i.removeEventListener('error',f);i.classList.add('fb');if(i.dataset.fb==='x'){i.style.display='none'}else{i.src=i.dataset.fb}}i.addEventListener('error',f);if(i.complete&&!i.naturalWidth)f()});
 var M=['Garance zpětného odkupu do 12 měsíců','Certifikát Entrupy ke každému kousku','Pojištěná doprava zdarma, odeslání do 24 hodin'],k=0,m=document.getElementById('msg');setInterval(function(){k=(k+1)%M.length;m.textContent=M[k]},4000);
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1});
+document.querySelectorAll('.rv').forEach(function(el,i){el.style.transitionDelay=(i%3)*90+'ms';io.observe(el)});
 })();
 </script>
 </body>

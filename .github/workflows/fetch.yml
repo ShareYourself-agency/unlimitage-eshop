@@ -1,0 +1,24 @@
+name: fetch-assets
+on:
+  push:
+    branches: [assets]
+    paths: [urls.txt, .github/workflows/fetch.yml]
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq imagemagick >/dev/null
+          mkdir -p raw
+          UA="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36"
+          while read -r p; do
+            [ -z "$p" ] && continue
+            n=$(basename "$p"); out="raw/${n%.*}.jpg"
+            curl -sL -A "$UA" -o /tmp/f "https://www.unlimitage.com/wp-content/$p" -w "$p %{http_code} %{size_download}\n" || true
+            convert /tmp/f -auto-orient -resize '2000x2000>' -quality 90 "$out" || echo "FAIL $p"
+          done < urls.txt | tee raw/log.txt
+          git config user.name "Share Yourself"; git config user.email "tomas@shareyourself.cz"
+          git add raw && git commit -qm "raw assets [skip ci]" && git push

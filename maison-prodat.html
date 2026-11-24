@@ -37,7 +37,7 @@
 .way p{margin:0;font-size:17px;line-height:1.5}
 .way em{margin-top:auto;padding-top:26px;font-style:normal;font-family:'Montserrat',sans-serif;font-size:11px;letter-spacing:.1em;text-transform:uppercase}
 .fw{background:#111;color:#F1E6D6;margin-top:120px;padding:100px 40px}
-.fw .in{display:grid;grid-template-columns:.8fr 1fr;gap:90px;max-width:1160px;margin:0 auto;align-items:start}
+.fw .fwi{display:grid;grid-template-columns:.8fr 1fr;gap:90px;max-width:1160px;margin:0 auto;align-items:start}
 .fw h2{margin:0 0 20px;font-weight:400;font-size:clamp(38px,4vw,60px);line-height:1.05;letter-spacing:0}
 .fw .lead{margin:0 0 34px;font-size:18px;line-height:1.55;color:#D8C9B5}
 .fw ul{list-style:none;margin:0;padding:0}
@@ -54,7 +54,7 @@
 .fm .dsc{width:100%;padding:18px;background:#F1E6D6;color:#111;border-color:#F1E6D6}
 .fm .dsc:hover{background:#FFFFFF;border-color:#FFFFFF;color:#111}
 .fm small{display:block;text-align:center;margin-top:18px;font-size:16px;color:#D8C9B5}
-@media (max-width:900px){.sh{grid-template-columns:1fr;min-height:0}.sh .t{padding:54px 20px}.sh .ph{min-height:340px}.what{padding:24px 16px;gap:10px 22px}.steps,.ways{grid-template-columns:1fr;padding:0 16px}.way{min-height:0}.fw{padding:64px 16px;margin-top:80px}.fw .in{grid-template-columns:1fr;gap:44px}.fm .r{grid-template-columns:1fr;gap:0}}
+@media (max-width:900px){.sh{grid-template-columns:1fr;min-height:0}.sh .t{padding:54px 20px}.sh .ph{min-height:340px}.what{padding:24px 16px;gap:10px 22px}.steps,.ways{grid-template-columns:1fr;padding:0 16px}.way{min-height:0}.fw{padding:64px 16px;margin-top:80px}.fw .fwi{grid-template-columns:1fr;gap:44px}.fm .r{grid-template-columns:1fr;gap:0}}
 </style>
 </head>
 <body>
@@ -90,7 +90,7 @@
   <a class="way rv" href="#nabidka"><span class="k sn">Bonus 10 %</span><h3>Trade-in</h3><p>Výměna za kredit na nákup u nás, s bonusem navíc.</p><em>Chci výměnu →</em></a>
 </section>
 
-<section class="fw" id="nabidka"><div class="in">
+<section class="fw" id="nabidka"><div class="fwi">
   <div><h2 class="rv">Získejte nabídku</h2><p class="lead rv">Vyplnění zabere dvě minuty. Ozveme se do 48 hodin.</p><ul class="rv"><li>Ocenění je zdarma a nezávazné</li><li>Pravost ověřujeme technologií Entrupy</li><li>Svoz po celé ČR je pojištěný</li></ul></div>
   <form class="fm rv" onsubmit="event.preventDefault();this.querySelector('button').textContent='Odesláno, ozveme se do 48 hodin'">
     <div class="r"><div><label for="c">Co prodáváte</label><select id="c"><option>Kabelku</option><option>Hodinky</option><option>Šperk</option><option>Doplněk</option></select></div><div><label for="z">Značka</label><input id="z" placeholder="např. Hermès"></div></div>

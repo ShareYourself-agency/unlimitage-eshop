@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Unlimitage – Návrh 7 · Resale</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;800&family=DM+Serif+Display&family=Libre+Caslon+Text:wght@700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1C1D21;--muted:#62646B;--grey:#EDEDED;--soft:#F5F5F5;--bx:#5A0C18;--pink:#F6DCE6;--line:#DADADA;--w:1226px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#FFFFFF;color:var(--ink);font-family:'Archivo',system-ui,sans-serif;font-size:14px;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.wrap{max-width:var(--w);margin:0 auto;padding:0 24px}
+.ds{font-family:'DM Serif Display',Georgia,serif;font-weight:400}
+.ul{text-decoration:underline;text-underline-offset:3px;font-size:12.5px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:15px 26px;font-weight:600;font-size:15px;border:1px solid var(--ink);transition:background .25s,color .25s}
+.btn.d{background:var(--ink);color:#FFFFFF}
+.btn.d:hover{background:#000}
+.btn.w{background:#FFFFFF;color:var(--ink);border-color:#FFFFFF}
+.btn.o{background:transparent}
+.btn.o:hover{background:var(--ink);color:#FFFFFF}
+.logo{display:inline-flex;flex-direction:column;align-items:center;border:1.5px solid currentColor;padding:6px 12px 4px;line-height:1}
+.logo b{font-family:'Libre Caslon Text',serif;font-weight:700;font-size:19px}
+.logo i{font-style:normal;font-family:'Libre Caslon Text',serif;font-weight:700;font-size:6.5px;letter-spacing:.18em;margin-top:3px}
+svg.i{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.5}
+
+.tb{background:var(--ink);color:#FFFFFF;display:grid;grid-template-columns:1fr auto 1fr;align-items:stretch;font-size:12px;height:34px}
+.tb>*{display:flex;align-items:center}
+.tb .l{padding-left:max(24px,calc((100vw - var(--w))/2 + 24px))}
+.tb .r{justify-content:flex-end}
+.tb .sell{background:var(--pink);color:var(--ink);font-weight:600;letter-spacing:.06em;padding:0 34px;height:100%;display:flex;align-items:center}
+.hd{position:sticky;top:0;z-index:40;background:#FFFFFF;border-bottom:1px solid #EEE}
+.hd .wrap{display:flex;align-items:center;gap:34px;height:82px}
+.hd nav{display:flex;gap:26px;font-size:13.5px}
+.hd nav a:hover{text-decoration:underline;text-underline-offset:5px}
+.hd nav .g{color:var(--bx);font-weight:600}
+.hd .ic{margin-left:auto;display:flex;gap:18px}
+
+.hero{background:var(--grey);overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1fr 1.25fr .8fr;align-items:center;gap:20px;height:calc(100vh - 116px);min-height:560px;max-height:760px}
+.hero h1{margin:0;font-weight:800;font-size:clamp(54px,7vw,104px);line-height:.95;letter-spacing:-.02em;text-transform:uppercase}
+.hero .cmp{position:relative;height:100%}
+.hero .cmp img{position:absolute;object-fit:contain;filter:drop-shadow(0 26px 26px rgba(0,0,0,.22))}
+.hero .cmp .a{left:16%;top:6%;width:62%;height:62%;animation:fl 8s ease-in-out infinite}
+.hero .cmp .b{left:-4%;bottom:2%;width:48%;height:44%;animation:fl 9s ease-in-out -2s infinite}
+.hero .cmp .c{right:-6%;bottom:6%;width:46%;height:42%;animation:fl 10s ease-in-out -4s infinite}
+.hero .cmp img.fb{object-fit:cover;filter:none;animation:none}
+.hero .cmp .a.fb{left:8%;top:5%;width:84%;height:90%}
+.hero .cmp .b.fb,.hero .cmp .c.fb{display:none}
+@keyframes fl{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.hero .rt{justify-self:end;text-align:right}
+.hero .rt p{margin:0 0 14px;font-weight:500;font-size:15px}
+.code{display:inline-block;background:var(--ink);color:#FFFFFF;border-radius:999px;padding:4px 12px;font-weight:600;font-size:13px;margin-left:6px}
+.hero small{display:block;margin-top:14px;font-size:11px;color:var(--muted)}
+
+.cats{padding:52px 0 44px;text-align:center}
+.cats h2{margin:0 0 8px;font-size:22px;color:var(--bx)}
+.cats p{margin:0 0 30px;color:var(--bx);font-size:15px}
+.cg{display:grid;grid-template-columns:repeat(6,1fr);gap:20px;text-align:left}
+.cg .ph{aspect-ratio:1.38;border-radius:4px;overflow:hidden;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.cg a:nth-child(3n+1) .ph{background:var(--bx)}
+.cg a:nth-child(3n+2) .ph{background:var(--soft)}
+.cg a:nth-child(3n) .ph{background:var(--pink)}
+.cg img{width:72%;height:80%;object-fit:contain;filter:drop-shadow(0 12px 10px rgba(0,0,0,.25));transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.cg img.fb{width:100%;height:100%;object-fit:cover;filter:none}
+.cg a:hover img{transform:scale(1.06)}
+
+.ban{background:var(--bx);color:#FFFFFF}
+.ban .wrap{display:grid;grid-template-columns:1fr 1fr;align-items:center;min-height:330px}
+.ban .ph{align-self:stretch;position:relative;overflow:hidden;margin-left:-24px}
+.ban .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 35%;mask-image:linear-gradient(90deg,#000 70%,transparent);-webkit-mask-image:linear-gradient(90deg,#000 70%,transparent)}
+.ban .t{text-align:center;padding:50px 20px}
+.ban h2{margin:0 0 10px;font-size:clamp(30px,2.8vw,40px)}
+.ban .k{font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-size:14px}
+.ban p{margin:10px 0 22px;font-size:15px}
+
+.fc{padding:76px 0 0}
+.fc h2{margin:0 0 26px;font-size:20px;color:var(--bx)}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.tile .ph{aspect-ratio:.955;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.g2 .tile .ph{aspect-ratio:1.24}
+.tile .ph>img.e{width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+.tile:hover .ph>img.e{transform:scale(1.04)}
+.tile .duo{position:relative;width:100%;height:100%}
+.tile .duo img{position:absolute;object-fit:contain;filter:drop-shadow(0 20px 18px rgba(0,0,0,.28))}
+.tile .duo img:first-child{left:8%;bottom:14%;width:52%;height:52%}
+.tile .duo img:last-child{right:6%;top:16%;width:50%;height:56%}
+.tile .duo img.fb{position:absolute;inset:0;width:100%;height:100%;left:0;top:0;right:0;bottom:0;object-fit:cover;filter:none}
+.tile .duo img.fb+img.fb{display:none}
+.tile h3{margin:22px 0 10px;font-weight:500;font-size:16px}
+.tile p{margin:0 0 8px;font-size:14.5px}
+.bx{background:var(--bx)}.pk{background:var(--pink)}.sf{background:var(--soft)}
+
+.band{background:var(--soft);margin-top:64px;display:grid;grid-template-columns:1.3fr 1fr;align-items:center;min-height:300px}
+.band .t{text-align:center;padding:40px 30px}
+.band .k{letter-spacing:.08em;text-transform:uppercase;font-size:14px}
+.band h3{margin:6px 0 16px;font-weight:500;font-size:23px}
+.band p{margin:0 0 20px;font-size:14px}
+.band small{display:block;margin-top:18px;font-size:11.5px;color:var(--muted)}
+.band .ph{height:100%;min-height:300px;position:relative;overflow:hidden}
+.band .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+
+.gift{color:#FFFFFF;flex-direction:column;gap:14px}
+.gift span{font-size:22px;font-weight:500}
+
+.rail-h{margin:70px 0 26px}
+.rail-h h3{margin:0 0 8px;font-weight:500;font-size:16px}
+.rw{position:relative}
+.rail{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:6px}
+.rail::-webkit-scrollbar{display:none}
+.pc{flex:0 0 calc((100% - 90px)/6);scroll-snap-align:start;text-align:center;position:relative}
+.pc .ph{aspect-ratio:1;display:flex;align-items:center;justify-content:center;background:#FFFFFF}
+.pc .ph img{width:86%;height:86%;object-fit:contain;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.pc .ph img.fb{width:100%;height:100%;object-fit:cover}
+.pc:hover .ph img{transform:scale(1.05)}
+.pc .hr{position:absolute;right:4px;top:4px;display:flex;align-items:center;gap:4px;background:#FFFFFF;border:0;border-radius:999px;padding:4px 8px;font:inherit;font-size:11px;cursor:pointer}
+.pc .hr svg{width:14px;height:14px;fill:none;stroke:var(--ink);stroke-width:1.5}
+.pc .hr.on svg{fill:var(--bx);stroke:var(--bx)}
+.pc .br{margin-top:12px;font-weight:600;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase}
+.pc .nm{margin-top:5px;font-size:14px;line-height:1.3;min-height:36px}
+.pc .cd{margin-top:8px;font-size:12px;color:var(--muted)}
+.pc .pr{margin-top:12px;font-weight:600;font-size:14.5px}
+.pc .ch{display:inline-block;margin-top:6px;background:#E6F3E4;color:#22601F;font-size:11px;padding:2px 6px;border-radius:2px}
+.nxt{position:absolute;right:-8px;top:34%;width:32px;height:32px;border-radius:50%;background:var(--ink);color:#FFFFFF;border:0;cursor:pointer;font-size:16px}
+
+.ref{background:var(--grey);margin-top:60px;overflow:hidden}
+.ref .wrap{display:grid;grid-template-columns:1fr 1.2fr;align-items:center;min-height:330px}
+.ref .ph{position:relative;align-self:stretch}
+.ref .ph img{position:absolute;left:8%;bottom:-8%;width:74%;height:104%;object-fit:contain;transform:rotate(-8deg);filter:drop-shadow(0 30px 30px rgba(0,0,0,.2))}
+.ref .ph img.fb{left:0;bottom:0;width:100%;height:100%;object-fit:cover;transform:none;filter:none}
+.ref .t{text-align:center;padding:50px 20px}
+.ref .k{letter-spacing:.08em;text-transform:uppercase;font-size:14px}
+.ref h3{margin:10px 0 14px;font-weight:500;font-size:23px}
+.ref p{margin:0 auto 24px;max-width:600px;font-size:14px;line-height:1.5}
+.ref .b{display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
+.ref .btn{min-width:180px}
+
+.info{background:#FAFAFA}
+.info .wrap{display:grid;grid-template-columns:repeat(3,1fr);padding-top:54px;padding-bottom:54px}
+.info div{text-align:center;padding:30px 24px;border-right:1px solid var(--line)}
+.info div:last-child{border-right:0}
+.info svg{width:30px;height:30px;fill:none;stroke:var(--ink);stroke-width:1.3;margin-bottom:14px}
+.info h4{margin:0 0 6px;font-weight:500;font-size:15.5px}
+.info p{margin:0 0 6px;font-size:13.5px}
+
+.ft{background:var(--ink);color:#FFFFFF;padding:46px 0 40px}
+.ft .wrap{display:grid;grid-template-columns:1.3fr repeat(4,1fr);gap:30px}
+.ft h4{margin:0 0 20px;font-weight:500;font-size:15.5px}
+.ft .cl a{display:block;margin-bottom:10px;font-size:12px}
+.ft form{display:flex;border:1px solid #777;max-width:234px;margin-bottom:28px}
+.ft input{flex:1;min-width:0;background:transparent;border:0;color:#FFFFFF;font:inherit;padding:11px 12px;outline:none}
+.ft button{background:transparent;border:0;border-left:1px solid #777;color:#FFFFFF;width:40px;cursor:pointer;font-size:16px}
+.ft .so{display:flex;gap:14px;font-size:12px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+@media (max-width:980px){.tb{grid-template-columns:1fr auto}.tb .l{display:none}.tb .m{padding-left:16px}.hd .wrap{height:64px;gap:16px}.hd nav{display:none}.hero .wrap{grid-template-columns:1fr;height:auto;max-height:none;padding-top:34px;padding-bottom:34px;gap:10px}.hero .cmp{height:340px}.hero .rt{justify-self:start;text-align:left}.cg{grid-template-columns:repeat(3,1fr);gap:14px}.ban .wrap{grid-template-columns:1fr}.ban .ph{min-height:260px;margin-right:-24px}.ban .ph img{mask-image:none;-webkit-mask-image:none}.g3,.g2{grid-template-columns:1fr;gap:34px}.band{grid-template-columns:1fr}.pc{flex-basis:44%}.nxt{display:none}.ref .wrap{grid-template-columns:1fr}.ref .ph{min-height:260px}.info .wrap{grid-template-columns:1fr}.info div{border-right:0;border-bottom:1px solid var(--line)}.ft .wrap{grid-template-columns:1fr 1fr}.ft .wrap>div:first-child{grid-column:1/-1}}
+</style>
+</head>
+<body>
+<div class="tb"><a class="l" href="#butik">Najít butik</a><span class="m" id="msg">Garance zpětného odkupu do 12 měsíců</span><div class="r"><a class="sell" href="#prodat">PRODAT</a></div></div>
+<header class="hd"><div class="wrap">
+  <a href="#" aria-label="Unlimitage Prague"><span class="logo"><b>UNLIMITAGE</b><i>PRAGUE</i></span></a>
+  <nav><a href="#nove">Novinky</a><a href="#znacky">Značky</a><a href="#nove">Kabelky</a><a href="#nove">Doplňky</a><a href="#nove">Šperky</a><a href="#nove">Hodinky</a><a href="#nove">Pánské</a><a class="g" href="#prodat">Prodat kabelku</a></nav>
+  <div class="ic"><a href="#" aria-label="Hledat"><svg class="i" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.500-3.500"/></svg></a><a href="#" aria-label="Oblíbené"><svg class="i" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg></a><a href="#" aria-label="Účet"><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="10" r="3"/><path d="M6.500 18.500a6.500 6.500 0 0 1 11 0"/></svg></a><a href="#" aria-label="Košík"><svg class="i" viewBox="0 0 24 24"><path d="M5 8h14l-1 12H6L5 8z"/><path d="M9 8a3 3 0 0 1 6 0"/></svg></a></div>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <h1>Ověřený<br>luxus<br>z Prahy</h1>
+  <div class="cmp"><img class="a" src="img/c-4096.png" data-fb="https://www.unlimitage.com/wp-content/smush-avif/2025/09/D.J_PORTRET_05.jpg.avif" alt="Lady Dior Python"><img class="b" src="img/c-6755.png" data-fb="x" alt="Fendi Peekaboo"><img class="c" src="img/c-3843.png" data-fb="x" alt="Chanel Wallet on Chain"></div>
+  <div class="rt"><p>Trade-in s bonusem <span class="code">+10 %</span></p><a class="btn d" href="#nove">Nakupovat</a><small>Bonus platí při výměně kabelky za kredit.</small></div>
+</div></section>
+
+<section class="cats" id="znacky"><div class="wrap">
+  <h2 class="ds">Nakupujte podle značky</h2>
+  <p>Každý kousek s certifikátem <b>Entrupy</b> a kontrolou v butiku.</p>
+  <div class="cg" id="cg"></div>
+</div></section>
+
+<section class="ban" id="prodat"><div class="wrap">
+  <div class="ph"><img src="https://www.unlimitage.com/wp-content/smush-avif/2025/09/Untitled-design-12.png.avif" alt="Hermès Birkin a Louis Vuitton Keepall" loading="lazy"></div>
+  <div class="t"><h2 class="ds">Vaše kabelka má hodnotu</h2><div class="k">Nabídka do 48 hodin</div><p>Výkup, komise nebo výměna. Stačí poslat fotky.</p><a class="btn w" href="https://wa.me/420773155173" target="_blank" rel="noopener">Ocenit kabelku</a></div>
+</div></section>
+
+<section class="fc"><div class="wrap">
+  <h2 class="ds">Vybrané kolekce</h2>
+  <div class="g3">
+    <a class="tile" href="#nove"><div class="ph bx"><div class="duo"><img src="img/c-4061.png" data-fb="https://www.unlimitage.com/wp-content/smush-avif/2024/11/780C761C-3033-4198-8866-0766706E2C85-1920x2880-1-scaled.jpeg.avif" alt="" loading="lazy"><img src="img/c-4096.png" data-fb="x" alt="" loading="lazy"></div></div><h3>Investiční kousky</h3><p>Birkin, Kelly a Lady Dior, které drží hodnotu.</p><span class="ul">Zobrazit výběr</span></a>
+    <a class="tile" href="#nove"><div class="ph sf"><img class="e" src="https://www.unlimitage.com/wp-content/smush-avif/2026/11/IMG_4128-1536x2048.jpeg.avif" alt="Lady Dior" loading="lazy" style="object-position:center 62%"></div><h3>Výběr z butiku</h3><p>Kousky, které právě teď doporučujeme.</p><span class="ul">Zobrazit doporučené</span></a>
+    <a class="tile" href="#nove"><div class="ph pk"><div class="duo"><img src="img/c-6990.png" data-fb="https://www.unlimitage.com/wp-content/uploads/2022/12/DSCF8293-2-scaled.webp" alt="" loading="lazy"><img src="img/c-6767.png" data-fb="x" alt="" loading="lazy"></div></div><h3>Kabelky do 20 000 Kč</h3><p>První luxusní kabelka nemusí stát jmění.</p><span class="ul">Zobrazit kabelky</span></a>
+  </div>
+
+  <div class="band">
+    <div class="t"><div class="k">Jistota při nákupu</div><h3>Garance zpětného odkupu</h3><p>Vybrané kousky od vás odkoupíme zpět do 12 měsíců za předem danou cenu.</p><a class="btn d" href="#nove">Zobrazit kousky s garancí</a><small>Podmínky garance najdete u každého produktu.</small></div>
+    <div class="ph"><img src="https://www.unlimitage.com/wp-content/uploads/2022/12/DSCF8101-2-scaled.webp" alt="Kontrola pravosti" loading="lazy"></div>
+  </div>
+
+  <div class="g2" style="margin-top:64px">
+    <a class="tile" href="#"><div class="ph sf"><img class="e" src="https://www.unlimitage.com/wp-content/smush-avif/2026/05/IMG_5372-scaled.jpg.avif" alt="Butik Unlimitage" loading="lazy"></div><h3>Butik Na Příkopě</h3><p>Přijďte si kabelku vyzkoušet. Po–So 11–17.</p><span class="ul">Rezervovat prohlídku</span></a>
+    <a class="tile" href="#"><div class="ph bx gift"><span class="logo"><b>UNLIMITAGE</b><i>PRAGUE</i></span><span>Dárkový poukaz</span></div><h3>Dárkový poukaz</h3><p>Ať si vybere sama.</p><span class="ul">Darovat poukaz</span></a>
+  </div>
+
+  <div class="rail-h" id="nove"><h3>Nově naskladněno</h3><span>Každý kousek je jen jeden. <a class="ul" style="font-size:14px" href="#">Zobrazit vše</a></span></div>
+  <div class="rw"><div class="rail" id="rail"></div><button class="nxt" type="button" id="nx" aria-label="Další">›</button></div>
+</div></section>
+
+<section class="ref"><div class="wrap">
+  <div class="ph"><img src="img/c-3984.png" data-fb="https://www.unlimitage.com/wp-content/smush-avif/2025/09/D.J_PORTRET_09-scaled.jpg.avif" alt="" loading="lazy"></div>
+  <div class="t"><div class="k">Nechcete se vázat?</div><h3>Vyměňte ji za jinou</h3><p>Kupte, noste a až vás přestane bavit, vyměňte ji u nás za další. Při výměně za kredit přidáme 10 % navíc.</p><div class="b"><a class="btn d" href="#nove">Nakupovat</a><a class="btn o" href="#prodat">Vyměnit kabelku</a></div></div>
+</div></section>
+
+<section class="info" id="butik"><div class="wrap">
+  <div><svg viewBox="0 0 24 24"><rect x="7" y="2.500" width="10" height="19" rx="1.500"/><path d="M11 5.500h2"/></svg><h4>WhatsApp</h4><p>Pošlete fotky a poradíme hned.</p><a class="ul" href="https://wa.me/420773155173" target="_blank" rel="noopener">Napsat</a></div>
+  <div><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.500 8-8 9-4.500-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg><h4>Kontrola autenticity</h4><p>Ověříme i vaši kabelku technologií Entrupy.</p><a class="ul" href="#">Více</a></div>
+  <div><svg viewBox="0 0 24 24"><path d="M12 21s7-6.200 7-11.500A7 7 0 0 0 5 9.500C5 14.800 12 21 12 21z"/><circle cx="12" cy="9.500" r="2.500"/></svg><h4>Nakupujte osobně</h4><p>Na Příkopě 23, Praha 1. Po–So 11–17.</p><a class="ul" href="#">Více</a></div>
+</div></section>
+
+<footer class="ft"><div class="wrap">
+  <div><h4>Hlídací pes</h4><form onsubmit="event.preventDefault();this.querySelector('button').textContent='✓'"><label for="nl" style="position:absolute;width:1px;height:1px;overflow:hidden">E-mail</label><input id="nl" type="email" placeholder="E-mail"><button type="submit" aria-label="Odeslat">›</button></form><h4>Sledujte nás</h4><div class="so"><a href="#">Instagram</a><a href="#">Facebook</a><a href="#">TikTok</a></div></div>
+  <div class="cl"><h4>Zákaznický servis</h4><a href="#">Kontakt</a><a href="#">Můj účet</a><a href="#">Doprava</a><a href="#">Vrácení</a><a href="#">Časté dotazy</a></div>
+  <div class="cl"><h4>Prodejte s námi</h4><a href="#">Jak prodat</a><a href="#">Výkup a komise</a><a href="#">Trade-in</a><a href="#">Garance odkupu</a></div>
+  <div class="cl"><h4>Nakupujte s námi</h4><a href="#">Autenticita</a><a href="#">Na zakázku</a><a href="#">Dárkové poukazy</a><a href="#">Novinky e-mailem</a></div>
+  <div class="cl"><h4>O nás</h4><a href="#">Náš příběh</a><a href="#">Butik</a><a href="#">Obchodní podmínky</a><a href="#">GDPR</a></div>
+</div></footer>
+<script>
+(function(){
+var W='https://www.unlimitage.com/wp-content/smush-avif/2026/11/IMG_',S='-1536x2048.jpeg.avif';
+var C=[['6990','Louis Vuitton'],['3843','Chanel'],['4096','Christian Dior'],['4031','Gucci'],['6755','Fendi'],['3984','Kabelky']];
+document.getElementById('cg').innerHTML=C.map(function(c){return '<a href="#nove"><div class="ph"><img loading="lazy" src="img/c-'+c[0]+'.png" data-fb="'+W+c[0]+S+'" alt="'+c[1]+'"></div><span class="ul">'+c[1]+'</span></a>'}).join('');
+var P=[['4096','Christian Dior','Lady Dior Python Multicolor','95 000 Kč','Jako nový'],['3843','Chanel','Classic Wallet on Chain Red','39 900 Kč','Výborný'],['6755','Fendi','Mini Peekaboo Black','37 000 Kč','Výborný'],['4031','Gucci','GG Marmont Chevron Dusty Pink','32 500 Kč','Výborný'],['3984','Christian Dior','Book Tote Houndstooth','34 000 Kč','Velmi dobrý'],['4061','Gucci','GG Marmont Cream','28 500 Kč','Výborný'],['6767','Louis Vuitton','Monogram Pochette Voyage MM','19 000 Kč','Velmi dobrý'],['6990','Louis Vuitton','Monogram Mini Pochette','12 500 Kč','Vintage']];
+var H='<svg viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg>';
+var rail=document.getElementById('rail');
+rail.innerHTML=P.map(function(p){return '<a class="pc" href="#"><div class="ph"><img loading="lazy" src="img/c-'+p[0]+'.png" data-fb="'+W+p[0]+S+'" alt="'+p[1]+' '+p[2]+'"></div><button type="button" class="hr" aria-label="Uložit">'+H+'</button><div class="br">'+p[1]+'</div><div class="nm">'+p[2]+'</div><div class="cd">Stav: '+p[4]+'</div><div class="pr">'+p[3]+'</div><span class="ch">Ověřeno Entrupy</span></a>'}).join('');
+document.getElementById('nx').onclick=function(){var m=rail.scrollWidth-rail.clientWidth;rail.scrollTo({left:rail.scrollLeft>m-10?0:rail.scrollLeft+rail.clientWidth*.6,behavior:'smooth'})};
+document.addEventListener('click',function(e){var h=e.target.closest('.hr');if(h){e.preventDefault();h.classList.toggle('on')}});
+document.querySelectorAll('img[data-fb]').forEach(function(i){function f(){i.removeEventListener('error',f);i.classList.add('fb');if(i.dataset.fb==='x'){i.style.display='none'}else{i.src=i.dataset.fb}}i.addEventListener('error',f);if(i.complete&&!i.naturalWidth)f()});
+var M=['Garance zpětného odkupu do 12 měsíců','Certifikát Entrupy ke každému kousku','Pojištěná doprava zdarma, odeslání do 24 hodin'],k=0,m=document.getElementById('msg');setInterval(function(){k=(k+1)%M.length;m.textContent=M[k]},4000);
+})();
+</script>
+</body>
+</html>

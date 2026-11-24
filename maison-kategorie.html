@@ -34,7 +34,7 @@
 <div class="crumb sn">Úvod / Kabelky</div>
 <section class="ct" style="padding-top:44px"><h1>Kabelky</h1><p>Hermès, Chanel, Dior, Louis Vuitton a další. Každý kousek je jen jeden a ke každému dostanete certifikát pravosti.</p></section>
 <div class="flt"><div id="f"><button type="button" class="on" data-f="">Vše</button><button type="button" data-f="Christian Dior">Dior</button><button type="button" data-f="Chanel">Chanel</button><button type="button" data-f="Louis Vuitton">Louis Vuitton</button><button type="button" data-f="Gucci">Gucci</button><button type="button" data-f="Fendi">Fendi</button></div><div><button type="button">Stav</button><button type="button">Cena</button><button type="button">Řadit: nejnovější</button></div></div>
-<div class="sel" id="grid" data-products="7" data-cta="Hlídat novinky e-mailem"></div>
+<div class="sel" id="grid" data-products="12"></div>
 </main>
 <section class="nl">
   <h2>Novinky z butiku</h2>
@@ -52,7 +52,7 @@
 </footer>
 <script src="maison.js"></script>
 <script>
-document.getElementById('f').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;this.querySelectorAll('button').forEach(function(x){x.classList.toggle('on',x===b)});document.querySelectorAll('#grid .pc').forEach(function(p){var h=p.querySelector('h3').textContent;p.classList.toggle('hide',!!b.dataset.f&&h!==b.dataset.f&&!p.classList.contains('cta'))})});
+document.getElementById('f').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;this.querySelectorAll('button').forEach(function(x){x.classList.toggle('on',x===b)});document.querySelectorAll('#grid .pc').forEach(function(p){var h=p.querySelector('h3').textContent;p.classList.toggle('hide',!!b.dataset.f&&h!==b.dataset.f)})});
 </script>
 </body>
 </html>

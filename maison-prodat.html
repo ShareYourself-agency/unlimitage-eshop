@@ -9,57 +9,44 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Libre+Caslon+Text:wght@700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="maison.css">
 <style>
-.sh{display:grid;grid-template-columns:1fr 1fr;min-height:calc(100vh - 170px)}
-.sh .t{background:#F7F2EC;display:flex;flex-direction:column;justify-content:center;padding:70px clamp(30px,6vw,110px)}
-.sh .k{font-size:11.5px;color:var(--muted);margin-bottom:22px}
-.sh h1{margin:0 0 24px;font-weight:400;font-size:clamp(44px,5.2vw,84px);line-height:1.02;letter-spacing:-.005em}
-.sh h1 i{font-style:italic}
-.sh p{margin:0 0 34px;font-size:19px;line-height:1.55;max-width:470px}
-.sh .b{display:flex;gap:10px;flex-wrap:wrap}
-.sh .ph{position:relative;overflow:hidden;background:#111}
-.sh .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% center;animation:kb 26s ease-in-out infinite alternate}
+.hero{position:relative;height:82vh;min-height:560px;overflow:hidden;background:#111;color:#FFFFFF}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 34%;animation:kb 28s ease-in-out infinite alternate}
 @keyframes kb{from{transform:scale(1.02)}to{transform:scale(1.1)}}
-.what{display:flex;justify-content:center;gap:12px 46px;flex-wrap:wrap;max-width:1240px;margin:0 auto;padding:34px 40px;border-bottom:1px solid var(--line);font-size:11.5px}
-.what b{font-weight:500;color:var(--muted)}
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;max-width:1240px;margin:44px auto 0;padding:0 40px}
-.steps div{padding:30px 0 0}
-.steps b{display:block;font-weight:400;font-size:70px;line-height:1;margin-bottom:22px;color:#C9B49C}
-.steps h3{margin:0 0 10px;font-family:'Montserrat',sans-serif;font-weight:500;font-size:14px;letter-spacing:.1em;text-transform:uppercase}
-.steps p{margin:0;font-size:17px;line-height:1.5;max-width:320px}
-.ways{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;max-width:1240px;margin:44px auto 0;padding:0 40px}
-.way{position:relative;background:var(--tile);padding:44px 36px 40px;min-height:330px;display:flex;flex-direction:column;overflow:hidden;transition:color .5s}
-.way:after{content:'';position:absolute;inset:0;background:#111;transform:translateY(101%);transition:transform .7s var(--ease)}
-.way:hover:after{transform:none}
-.way:hover{color:#FFFFFF}
-.way>*{position:relative;z-index:1}
-.way .k{font-size:10.5px;opacity:.7}
-.way h3{margin:16px 0 14px;font-weight:400;font-size:38px;line-height:1.05;letter-spacing:0}
-.way p{margin:0;font-size:17px;line-height:1.5}
-.way em{margin-top:auto;padding-top:26px;font-style:normal;font-family:'Montserrat',sans-serif;font-size:11px;letter-spacing:.1em;text-transform:uppercase}
-.fw{background:#111;color:#F1E6D6;margin-top:120px;padding:100px 40px}
-.fw .fwi{display:grid;grid-template-columns:.8fr 1fr;gap:90px;max-width:1160px;margin:0 auto;align-items:start}
-.fw h2{margin:0 0 20px;font-weight:400;font-size:clamp(38px,4vw,60px);line-height:1.05;letter-spacing:0}
-.fw .lead{margin:0 0 34px;font-size:18px;line-height:1.55;color:#D8C9B5}
-.fw ul{list-style:none;margin:0;padding:0}
-.fw li{padding:16px 0;border-top:1px solid rgba(241,230,214,.2);font-size:17px}
-.fw li:last-child{border-bottom:1px solid rgba(241,230,214,.2)}
-.fm label{display:block;font-family:'Montserrat',sans-serif;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;margin:0 0 6px;color:#B9A892}
-.fm input,.fm select{width:100%;border:0;border-bottom:1px solid rgba(241,230,214,.5);background:transparent;color:#FFFFFF;font:inherit;padding:8px 0 12px;margin-bottom:28px;outline:none;border-radius:0}
-.fm select option{color:#111}
-.fm input:focus,.fm select:focus{border-color:#FFFFFF}
+.hero:after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(0,0,0,.5) 0%,rgba(0,0,0,.25) 60%,rgba(0,0,0,.35) 100%),linear-gradient(180deg,rgba(0,0,0,.5),rgba(0,0,0,0) 28%)}
+.hero .cap{position:absolute;z-index:2;left:0;right:0;top:56%;transform:translateY(-50%);text-align:center;padding:0 24px}
+.hero .k{font-size:11.5px;display:block;margin-bottom:22px;opacity:0;animation:up 1.2s .2s var(--ease) forwards}
+.hero h1{margin:0 0 20px;font-family:'Montserrat',sans-serif;font-weight:500;font-size:clamp(26px,3.2vw,48px);letter-spacing:.14em;text-transform:uppercase;line-height:1.2;opacity:0;animation:up 1.3s .4s var(--ease) forwards}
+.hero p{margin:0 auto 28px;max-width:560px;font-size:18px;line-height:1.5;opacity:0;animation:up 1.2s .7s var(--ease) forwards}
+.hero .dsc{opacity:0;animation:up 1.2s .9s var(--ease) forwards}
+@keyframes up{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.of{display:grid;grid-template-columns:1fr 1fr;gap:110px;max-width:1160px;margin:0 auto;padding:100px 40px 0;align-items:start}
+.of h2{margin:0 0 16px;font-family:'Montserrat',sans-serif;font-weight:500;font-size:24px;letter-spacing:.1em;text-transform:uppercase}
+.of .lead{margin:0 0 40px;font-size:18px;line-height:1.55}
+.st{display:grid;grid-template-columns:64px 1fr;gap:10px;padding:24px 0;align-items:start}
+.st b{font-weight:400;font-size:40px;line-height:.9;color:#B9A28A}
+.st h3{margin:2px 0 6px;font-family:'Montserrat',sans-serif;font-weight:500;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase}
+.st p{margin:0;font-size:17px;line-height:1.5;color:#333}
+.fm{padding-top:6px}
+.fm label{display:block;font-family:'Montserrat',sans-serif;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;margin:0 0 4px;color:var(--muted)}
+.fm input,.fm select{width:100%;border:0;border-bottom:1px solid var(--ink);background:transparent;font:inherit;font-size:17px;padding:8px 0 11px;margin-bottom:28px;outline:none;border-radius:0}
 .fm .r{display:grid;grid-template-columns:1fr 1fr;gap:28px}
-.up{display:block;border:1px dashed rgba(241,230,214,.5);padding:34px 20px;text-align:center;margin-bottom:30px;cursor:pointer;transition:background .3s;color:#D8C9B5;font-family:'EB Garamond',serif!important;font-size:16px!important;letter-spacing:.02em!important;text-transform:none!important}
-.up:hover{background:rgba(255,255,255,.06)}
-.up b{display:block;font-family:'Montserrat',sans-serif;font-weight:500;font-size:12px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px;color:#FFFFFF}
-.fm .dsc{width:100%;padding:18px;background:#F1E6D6;color:#111;border-color:#F1E6D6}
-.fm .dsc:hover{background:#FFFFFF;border-color:#FFFFFF;color:#111}
-.fm small{display:block;text-align:center;margin-top:18px;font-size:16px;color:#D8C9B5}
-@media (max-width:900px){.sh{grid-template-columns:1fr;min-height:0}.sh .t{padding:54px 20px}.sh .ph{min-height:340px}.what{padding:24px 16px;gap:10px 22px}.steps,.ways{grid-template-columns:1fr;padding:0 16px}.way{min-height:0}.fw{padding:64px 16px;margin-top:80px}.fw .fwi{grid-template-columns:1fr;gap:44px}.fm .r{grid-template-columns:1fr;gap:0}}
+.up{display:block;border:1px solid var(--line);background:#FAF7F3;padding:30px 20px;text-align:center;margin-bottom:28px;cursor:pointer;transition:border-color .3s;font-family:'EB Garamond',serif!important;font-size:16px!important;letter-spacing:.02em!important;text-transform:none!important;color:#333!important}
+.up:hover{border-color:var(--ink)}
+.up b{display:block;font-family:'Montserrat',sans-serif;font-weight:500;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px;color:var(--ink)}
+.fm .dsc{width:100%;padding:18px}
+.fm small{display:block;text-align:center;margin-top:18px;font-size:16px}
+.three{display:grid;grid-template-columns:repeat(3,1fr);max-width:1160px;margin:44px auto 0;padding:0 40px}
+.three div{text-align:center;padding:10px 34px;border-right:1px solid var(--line)}
+.three div:last-child{border-right:0}
+.three .k{font-size:10.5px;color:var(--muted)}
+.three h3{margin:14px 0 10px;font-weight:400;font-size:32px;line-height:1.1;letter-spacing:0}
+.three p{margin:0;font-size:17px;line-height:1.5}
+@media (max-width:900px){.hero{height:74vh}.of{grid-template-columns:1fr;gap:50px;padding:64px 16px 0}.fm .r{grid-template-columns:1fr;gap:0}.three{grid-template-columns:1fr;padding:0 16px}.three div{border-right:0;border-bottom:1px solid var(--line);padding:30px 10px}.three div:last-child{border-bottom:0}}
 </style>
 </head>
 <body>
 <div class="ann sn">Garance zpětného odkupu do 12 měsíců<button type="button" aria-label="Zavřít" onclick="this.parentNode.remove()">×</button></div>
-<header class="hd solid">
+<header class="hd">
   <div class="top">
     <div class="u sn"><a href="#">Česko</a><a href="maison-butik.html">Kontakt</a><a href="navrh-6.html#sluzby">Služby</a></div>
     <a href="navrh-6.html" aria-label="Unlimitage Prague"><span class="logo"><b>UNLIMITAGE</b><i>PRAGUE</i></span></a>
@@ -67,42 +54,40 @@
   </div>
   <nav class="sn"><a href="maison-kategorie.html">Hermès</a><a href="maison-kategorie.html">Chanel</a><a href="maison-kategorie.html">Louis Vuitton</a><a href="maison-kategorie.html">Dior</a><a href="maison-kategorie.html">Hodinky</a><a href="maison-kategorie.html">Šperky</a><a href="maison-prodat.html">Prodat</a><a href="maison-butik.html">Butik</a></nav>
 </header>
-<div class="bar sn" id="bar" data-at="220"><a href="maison-kategorie.html">Hermès</a><a href="maison-kategorie.html">Chanel</a><a href="maison-kategorie.html">Louis Vuitton</a><a href="maison-kategorie.html">Dior</a><a href="maison-kategorie.html">Hodinky</a><a href="maison-kategorie.html">Šperky</a><a href="maison-prodat.html">Prodat</a><a href="maison-butik.html">Butik</a><span class="sep"></span><a href="#" aria-label="Hledat"><svg class="i" style="width:16px;height:16px" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.500-3.500"/></svg></a></div>
+<div class="bar sn" id="bar" data-at="140"><a href="maison-kategorie.html">Hermès</a><a href="maison-kategorie.html">Chanel</a><a href="maison-kategorie.html">Louis Vuitton</a><a href="maison-kategorie.html">Dior</a><a href="maison-kategorie.html">Hodinky</a><a href="maison-kategorie.html">Šperky</a><a href="maison-prodat.html">Prodat</a><a href="maison-butik.html">Butik</a><span class="sep"></span><a href="#" aria-label="Hledat"><svg class="i" style="width:16px;height:16px" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.500-3.500"/></svg></a></div>
 
 <main>
-<section class="sh">
-  <div class="t"><span class="k sn">Výkup · Komise · Trade-in</span><h1>Váš luxus má <i>stále hodnotu</i></h1><p>Kabelky, hodinky, šperky i doplňky. Pošlete fotky a do 48 hodin víte, kolik za ně dostanete.</p><div class="b"><a class="dsc fill" href="#nabidka">Chci nabídku</a><a class="dsc" href="https://wa.me/420773155173" target="_blank" rel="noopener">Poslat fotky na WhatsApp</a></div></div>
-  <div class="ph"><img src="img/e-check.webp" alt="Ocenění a kontrola pravosti"></div>
-</section>
-<div class="what sn"><b>Vykupujeme</b><span>Kabelky</span><span>Hodinky</span><span>Šperky</span><span>Peněženky a doplňky</span><span>Cestovní tašky</span></div>
-
-<section class="ct"><h2 class="rv">Jak to probíhá</h2></section>
-<section class="steps">
-  <div class="ln rv"><b>1</b><h3>Pošlete fotky</h3><p>Celek, logo, vnitřek a detaily. Stačí telefon.</p></div>
-  <div class="ln rv"><b>2</b><h3>Nabídka do 48 hodin</h3><p>Dostanete konkrétní částku pro každý způsob prodeje.</p></div>
-  <div class="ln rv"><b>3</b><h3>Peníze nebo kredit</h3><p>Pojištěný svoz z celé ČR, nebo osobně v butiku.</p></div>
+<section class="hero">
+  <img src="img/e-three.webp" alt="Hermès Birkin a Louis Vuitton Keepall">
+  <div class="cap"><span class="k sn">Výkup · Komise · Trade-in</span><h1>Váš luxus má hodnotu</h1><p>Kabelky, hodinky, šperky i doplňky. Nabídku dostanete do 48 hodin.</p><a class="dsc lt" href="#nabidka">Získat nabídku</a></div>
 </section>
 
-<section class="ct" style="padding-top:110px"><h2 class="rv">Tři způsoby prodeje</h2><p class="rv">Vyberete si podle toho, jestli chcete peníze hned, co nejvyšší částku, nebo nový kousek.</p></section>
-<section class="ways">
-  <a class="way rv" href="#nabidka"><span class="k sn">Nejrychlejší</span><h3>Výkup</h3><p>Peníze ihned po ověření pravosti.</p><em>Chci výkup →</em></a>
-  <a class="way rv" href="#nabidka"><span class="k sn">Nejvyšší částka</span><h3>Komisní prodej</h3><p>Prodáme za vás v butiku i online. Vyplácíme po prodeji.</p><em>Chci komisi →</em></a>
-  <a class="way rv" href="#nabidka"><span class="k sn">Bonus 10 %</span><h3>Trade-in</h3><p>Výměna za kredit na nákup u nás, s bonusem navíc.</p><em>Chci výměnu →</em></a>
-</section>
-
-<section class="fw" id="nabidka"><div class="fwi">
-  <div><h2 class="rv">Získejte nabídku</h2><p class="lead rv">Vyplnění zabere dvě minuty. Ozveme se do 48 hodin.</p><ul class="rv"><li>Ocenění je zdarma a nezávazné</li><li>Pravost ověřujeme technologií Entrupy</li><li>Svoz po celé ČR je pojištěný</li></ul></div>
+<section class="of" id="nabidka">
+  <div>
+    <h2 class="rv">Získejte nabídku</h2>
+    <p class="lead rv">Ocenění je zdarma a nezávazné. Stačí pár fotek z telefonu.</p>
+    <div class="st ln"><b>1</b><div><h3>Pošlete fotky</h3><p>Celek, logo, vnitřek a detaily.</p></div></div>
+    <div class="st ln"><b>2</b><div><h3>Nabídka do 48 hodin</h3><p>Konkrétní částka pro výkup, komisi i výměnu.</p></div></div>
+    <div class="st ln"><b>3</b><div><h3>Peníze nebo kredit</h3><p>Pojištěný svoz z celé ČR, nebo osobně v butiku.</p></div></div>
+    <div class="ln" style="height:1px"></div>
+  </div>
   <form class="fm rv" onsubmit="event.preventDefault();this.querySelector('button').textContent='Odesláno, ozveme se do 48 hodin'">
-    <div class="r"><div><label for="c">Co prodáváte</label><select id="c"><option>Kabelku</option><option>Hodinky</option><option>Šperk</option><option>Doplněk</option></select></div><div><label for="z">Značka</label><input id="z" placeholder="např. Hermès"></div></div>
-    <div class="r"><div><label for="m">Model</label><input id="m" placeholder="např. Kelly 28"></div><div><label for="s">Stav</label><select id="s"><option>Jako nový</option><option>Výborný</option><option>Velmi dobrý</option><option>Nošený</option></select></div></div>
-    <label class="up" for="fo"><b>Nahrát fotky</b>Celek, logo, vnitřek a detaily<input id="fo" type="file" multiple accept="image/*" style="display:none"></label>
+    <div class="r"><div><label for="c">Co prodáváte</label><select id="c"><option>Kabelku</option><option>Hodinky</option><option>Šperk</option><option>Doplněk</option></select></div><div><label for="z">Značka a model</label><input id="z" placeholder="např. Hermès Kelly 28"></div></div>
+    <label class="up" for="fo"><b>Nahrát fotky</b>Přetáhněte sem nebo vyberte z telefonu<input id="fo" type="file" multiple accept="image/*" style="display:none"></label>
     <div class="r"><div><label for="j">Jméno</label><input id="j" autocomplete="name"></div><div><label for="t">Telefon nebo e-mail</label><input id="t"></div></div>
-    <button class="dsc" type="submit">Chci nabídku</button>
+    <button class="dsc fill" type="submit">Chci nabídku</button>
     <small>Nebo rovnou <a class="ul" href="https://wa.me/420773155173" target="_blank" rel="noopener">pošlete fotky na WhatsApp</a></small>
   </form>
-</div></section>
+</section>
+
+<section class="ct" style="padding-top:110px"><h2 class="rv">Tři způsoby prodeje</h2></section>
+<section class="three">
+  <div class="rv"><span class="k sn">Nejrychlejší</span><h3>Výkup</h3><p>Peníze ihned po ověření pravosti.</p></div>
+  <div class="rv"><span class="k sn">Nejvyšší částka</span><h3>Komise</h3><p>Prodáme za vás, vyplácíme po prodeji.</p></div>
+  <div class="rv"><span class="k sn">Bonus 10 %</span><h3>Trade-in</h3><p>Výměna za kredit na nákup u nás.</p></div>
+</section>
 </main>
-<section class="nl" style="padding-top:90px">
+<section class="nl">
   <h2>Novinky z butiku</h2>
   <p style="margin:0">Dáme vám vědět, když naskladníme model, který hledáte.</p>
   <form onsubmit="event.preventDefault();this.querySelector('button').textContent='DĚKUJEME'"><label for="nl" style="position:absolute;width:1px;height:1px;overflow:hidden">E-mail</label><input id="nl" type="email" placeholder="E-mail *" required><button type="submit">ODESLAT</button></form>

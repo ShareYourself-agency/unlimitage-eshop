@@ -2,7 +2,7 @@ name: fetch-assets
 on:
   push:
     branches: [assets]
-    paths: [ids.txt]
+    paths: [paths.txt]
 permissions:
   contents: write
 jobs:
@@ -14,13 +14,12 @@ jobs:
           sudo apt-get update -qq && sudo apt-get install -y -qq imagemagick >/dev/null
           mkdir -p raw
           UA="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36"
-          while read -r n; do
-            [ -z "$n" ] && continue
-            for suf in "-1536x2048.jpeg" "-scaled.jpeg" ".jpeg" "-1024x1024.jpeg" "-768x1024.jpeg" "-300x300.jpeg"; do
-              code=$(curl -sL -A "$UA" -o /tmp/f "https://www.unlimitage.com/wp-content/uploads/2026/11/$n$suf" -w "%{http_code}")
-              echo "$n$suf $code"
-              if [ "$code" = "200" ] && convert /tmp/f -auto-orient -resize '2000x2000>' -quality 90 "raw/$n.jpg"; then break; fi
-            done
-          done < ids.txt | tee raw/log2.txt
+          while read -r p; do
+            [ -z "$p" ] && continue
+            n=$(basename "$p"); n="${n%.*}"
+            code=$(curl -sL -A "$UA" -o /tmp/f "https://www.unlimitage.com/wp-content/uploads/$p" -w "%{http_code}")
+            echo "$p $code"
+            [ "$code" = "200" ] && convert /tmp/f -auto-orient -resize '2200x2200>' -quality 90 "raw/$n.jpg" || true
+          done < paths.txt | tee raw/log3.txt
           git config user.name "Share Yourself"; git config user.email "tomas@shareyourself.cz"
-          git add raw && git commit -qm "raw assets 2 [skip ci]" && git push
+          git add raw && git commit -qm "raw assets 3 [skip ci]" && git push

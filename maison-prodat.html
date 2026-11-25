@@ -21,8 +21,8 @@
 .hero h1 span b{display:inline-block;font-weight:500;transform:translateY(105%);animation:rise 1.3s var(--ease) forwards}
 @keyframes rise{to{transform:none}}
 .hero .sc{position:absolute;z-index:2;left:50%;bottom:26px;width:1px;height:46px;background:rgba(255,255,255,.35);overflow:hidden}
-.hero .sc:after{content:'';position:absolute;left:0;top:-100%;width:100%;height:100%;background:#FFFFFF;animation:sc 2.2s var(--ease) infinite}
-@keyframes sc{to{top:100%}}
+.hero .sc:after{content:'';position:absolute;left:0;top:-100%;width:100%;height:100%;background:#FFFFFF;animation:sc 1.6s 1.6s var(--ease) forwards}
+@keyframes sc{to{top:0}}
 .hero p{margin:0 auto 28px;max-width:560px;font-size:18px;line-height:1.5;opacity:0;animation:up 1.2s 1s var(--ease) forwards}
 .hero .dsc{opacity:0;animation:up 1.2s 1.2s var(--ease) forwards}
 @keyframes up{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}

@@ -63,7 +63,9 @@ svg.i{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.4}
 .ft{border-top:1px solid var(--line);margin:0 20px;padding:60px 0}
 .ft .c{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;max-width:1150px;margin:0 auto;padding:0 20px}
 .ft h4{margin:0 0 22px;font-family:'Montserrat',sans-serif;font-weight:500;font-size:14px;letter-spacing:.1em;text-transform:uppercase}
-.ft a,.ft span{display:block;margin-bottom:17px;font-family:'Montserrat',sans-serif;font-size:11px;letter-spacing:.1em;text-transform:uppercase}
+.ft a,.ft span{display:table;margin-bottom:17px;font-family:'Montserrat',sans-serif;font-size:11px;letter-spacing:.1em;text-transform:uppercase}
+.ft a{padding-bottom:4px;background:linear-gradient(currentColor,currentColor) left bottom/0 1px no-repeat;transition:background-size .45s var(--ease)}
+.ft a:hover{background-size:100% 1px}
 .end{background:var(--ox);color:#FFFFFF;padding:18px 40px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:14px}
 .end b{font-family:'Montserrat',sans-serif;font-weight:500;font-size:11px;letter-spacing:.1em;text-transform:uppercase;margin-right:8px}
 
@@ -73,7 +75,7 @@ svg.i{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.4}
 .rv.pc.in img{transform:none}
 .rv.pc.in:hover img{transform:translateY(-10px) scale(1.04)}
 .ln{position:relative}
-.ln:before{content:'';position:absolute;left:0;right:0;top:0;height:1px;background:var(--ink);transform:scaleX(0);transform-origin:left;transition:transform 1.3s var(--ease)}
+.ln:before{content:'';position:absolute;left:0;right:0;top:0;height:1px;background:var(--ink);transform:scaleX(0);transform-origin:left;transition:transform 2.4s var(--ease)}
 .ln.in:before{transform:none}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}.ln:before{transform:none}}
 @media (max-width:900px){.hd .u,.hd nav{display:none}.hd .top{padding:0 18px;grid-template-columns:auto 1fr}.bar{justify-content:flex-start;overflow-x:auto;padding:0 16px;gap:20px;white-space:nowrap}.sel{grid-template-columns:1fr 1fr;gap:30px 14px;padding:0 16px}.pc.cta b{font-size:24px}.ft .c{grid-template-columns:1fr 1fr}.end{padding:16px}.ct{padding-top:64px}}

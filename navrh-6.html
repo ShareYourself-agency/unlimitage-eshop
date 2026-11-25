@@ -22,25 +22,33 @@
 .hero p{margin:0 auto 28px;max-width:560px;font-size:18px;line-height:1.5;opacity:0;animation:up 1.2s .9s var(--ease) forwards}
 .hero .dsc{opacity:0;animation:up 1.2s 1.1s var(--ease) forwards}
 .hero .sc{position:absolute;z-index:2;left:50%;bottom:26px;width:1px;height:46px;background:rgba(255,255,255,.35);overflow:hidden}
-.hero .sc:after{content:'';position:absolute;left:0;top:-100%;width:100%;height:100%;background:#FFFFFF;animation:sc 2.2s var(--ease) infinite}
+.hero .sc:after{content:'';position:absolute;left:0;top:-100%;width:100%;height:100%;background:#FFFFFF;animation:sc 1.6s 1.6s var(--ease) forwards}
 @keyframes rise{to{transform:none}}
 @keyframes up{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
-@keyframes sc{to{top:100%}}
+@keyframes sc{to{top:0}}
 
-.wd{max-width:1180px;margin:0 auto;padding:130px 40px 30px;text-align:center}
-.wd .k{font-size:11.5px;color:var(--muted)}
-.wd h2{margin:26px auto 0;max-width:1040px;font-weight:400;font-size:clamp(30px,3.7vw,58px);line-height:1.22;letter-spacing:0}
-.wd h2 span{opacity:.14;transition:opacity .5s linear}
-.wd h2 span.on{opacity:1}
-.wd h2 i{font-style:italic}
-.do{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;max-width:1240px;margin:70px auto 0;padding:0 40px}
-.do a{display:block;padding:34px 0 0;text-align:left}
-.do i{font-style:normal;font-size:10.5px;color:var(--muted)}
-.do h3{margin:16px 0 12px;font-weight:400;font-size:34px;line-height:1.1;letter-spacing:0}
-.do p{margin:0 0 20px;font-size:17px;line-height:1.5;max-width:330px}
-.do em{font-style:normal;display:inline-flex;gap:10px;font-family:'Montserrat',sans-serif;font-size:11px;letter-spacing:.1em;text-transform:uppercase}
-.do em b{font-weight:400;transition:transform .5s var(--ease)}
-.do a:hover em b{transform:translateX(8px)}
+.story{position:relative;height:320vh}
+.story .pin{position:sticky;top:0;height:100vh;overflow:hidden}
+.stt{position:absolute;left:0;right:0;top:50%;text-align:center;padding:0 40px;transform:translateY(-50%);transform-origin:center top;will-change:transform}
+.stt .k{font-size:11.5px;color:var(--muted)}
+.stt h2{margin:24px auto 0;max-width:1040px;font-weight:400;font-size:clamp(30px,3.7vw,58px);line-height:1.22;letter-spacing:0}
+.stt h2 span{opacity:.14;transition:opacity .5s linear}
+.stt h2 span.on{opacity:1}
+.cds{position:absolute;left:0;right:0;bottom:5vh;display:grid;grid-template-columns:repeat(3,1fr);gap:28px;max-width:1240px;margin:0 auto;padding:0 40px}
+.cd{display:flex;flex-direction:column;will-change:transform,opacity}
+.cd .ph{height:30vh;overflow:hidden;background:var(--tile)}
+.cd .ph img{width:100%;height:100%;object-fit:cover;transition:transform 1.6s var(--ease)}
+.cd:hover .ph img{transform:scale(1.05)}
+.cd i{font-style:normal;font-size:10.5px;color:var(--muted);margin-top:20px}
+.cd h3{margin:10px 0 8px;font-weight:400;font-size:clamp(24px,2.1vw,32px);line-height:1.1;letter-spacing:0}
+.cd p{margin:0 0 18px;font-size:16.5px;line-height:1.45}
+.go{margin-top:auto;display:flex;justify-content:space-between;align-items:center;border:1px solid var(--ink);padding:15px 18px;font-family:'Montserrat',sans-serif;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:500;position:relative;overflow:hidden;transition:color .6s var(--ease)}
+.go:before{content:'';position:absolute;inset:0;background:var(--ink);transform:translateY(101%);transition:transform .7s var(--ease)}
+.go>*{position:relative}
+.go b{font-weight:400;font-size:16px;transition:transform .7s var(--ease)}
+.cd:hover .go{color:#FFFFFF}
+.cd:hover .go:before{transform:none}
+.cd:hover .go b{transform:translateX(6px)}
 .brs{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;max-width:1240px;margin:46px auto 0;padding:0 40px}
 .br{text-align:center;display:block}
 .br .ph{position:relative;aspect-ratio:1/1.3;background:var(--tile);overflow:hidden;display:flex;align-items:center;justify-content:center}
@@ -59,29 +67,32 @@
 .num span{font-size:11px;color:#D8C9B5;line-height:1.6;display:block}
 .srv{max-width:1240px;margin:70px auto 0;padding:0 40px}
 .sr{position:relative;display:grid;grid-template-columns:70px 300px 1fr auto;gap:24px;align-items:center;padding:30px 20px;overflow:hidden}
-.sr:after{content:'';position:absolute;inset:0;background:var(--tile);transform:scaleX(0);transform-origin:left;transition:transform .7s var(--ease);z-index:-1}
+.sr:after{content:'';position:absolute;inset:0;background:var(--tile);transform:scaleX(0);transform-origin:left;transition:transform 1.4s var(--ease);z-index:-1}
 .sr:hover:after{transform:none}
 .sr i{font-style:normal;font-size:11px;color:var(--muted)}
 .sr h3{margin:0;font-family:'Montserrat',sans-serif;font-weight:500;font-size:15px;letter-spacing:.1em;text-transform:uppercase}
 .sr p{margin:0;font-size:17px;color:#333}
-.sr em{font-style:normal;font-size:20px;transition:transform .5s var(--ease)}
+.sr em{font-style:normal;font-size:20px;transition:transform 1s var(--ease)}
 .sr:hover em{transform:translateX(10px)}
 .srv .last{height:1px}
 
-.bt{display:grid;grid-template-columns:.9fr 1fr;gap:90px;align-items:center;max-width:1100px;margin:130px auto 0;padding:0 40px}
-.bt .ph{position:relative;aspect-ratio:4/5}
-.bt .ph:before{content:'';position:absolute;left:-26px;top:26px;right:26px;bottom:-26px;background:var(--tile)}
-.bt .ph div{position:absolute;inset:0;overflow:hidden}
+.btw{background:#F7F2EC;margin-top:130px;padding:110px 0}
+.bt{display:grid;grid-template-columns:1.05fr 1fr;gap:100px;align-items:center;max-width:1240px;margin:0 auto;padding:0 40px}
+.bt .ph{position:relative;padding:0 70px 60px 0}
+.bt .ph .m{aspect-ratio:4/5;overflow:hidden}
+.bt .ph .s{position:absolute;right:0;bottom:0;width:42%;aspect-ratio:4/5;overflow:hidden;border:8px solid #F7F2EC}
 .bt .ph img{width:100%;height:100%;object-fit:cover;transition:transform 1.8s var(--ease)}
-.bt:hover .ph img{transform:scale(1.04)}
+.bt .ph div:hover img{transform:scale(1.05)}
 .bt .k{font-size:11.5px;color:var(--muted)}
-.bt h2{margin:16px 0 30px;font-weight:400;font-size:clamp(36px,3.6vw,54px);line-height:1.08;letter-spacing:0}
+.bt h2{margin:16px 0 18px;font-weight:400;font-size:clamp(40px,4.2vw,64px);line-height:1.04;letter-spacing:0}
+.bt h2 i{font-style:italic}
+.bt .lead{margin:0 0 30px;font-size:19px;line-height:1.55;max-width:460px}
 .bt dl{margin:0 0 34px}
 .bt dl div{display:grid;grid-template-columns:130px 1fr;padding:15px 0;font-size:17px}
 .bt dt{font-family:'Montserrat',sans-serif;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);align-self:center}
 .bt dd{margin:0}
 .bt .b{display:flex;gap:10px;flex-wrap:wrap}
-@media (max-width:900px){.wd{padding:80px 20px 10px}.do{grid-template-columns:1fr;gap:10px;padding:0 16px;margin-top:40px}.brs{grid-template-columns:1fr 1fr;gap:26px 14px;padding:0 16px}.numw{margin-top:80px;padding:60px 0}.num{grid-template-columns:1fr 1fr;padding:0 16px;gap:40px 0}.num div:nth-child(2){border-right:0}.srv{padding:0 16px}.sr{grid-template-columns:36px 1fr auto;gap:12px;padding:24px 6px}.sr p{grid-column:2/3;grid-row:2}.sr em{grid-row:1/3;grid-column:3}.bt{grid-template-columns:1fr;gap:54px;padding:0 16px 0 40px;margin-top:80px}}
+@media (max-width:900px){.story{height:auto}.story .pin{position:static;height:auto;overflow:visible;padding:80px 0 0}.stt{position:static;transform:none!important;padding:0 20px}.stt h2 span{opacity:1}.cds{position:static;grid-template-columns:1fr;gap:44px;padding:0 16px;margin-top:50px}.cd{transform:none!important;opacity:1!important}.cd .ph{height:56vw}.brs{grid-template-columns:1fr 1fr;gap:26px 14px;padding:0 16px}.numw{margin-top:80px;padding:60px 0}.num{grid-template-columns:1fr 1fr;padding:0 16px;gap:40px 0}.num div:nth-child(2){border-right:0}.srv{padding:0 16px}.sr{grid-template-columns:36px 1fr auto;gap:12px;padding:24px 6px}.sr p{grid-column:2/3;grid-row:2}.sr em{grid-row:1/3;grid-column:3}.btw{margin-top:80px;padding:60px 0}.bt{grid-template-columns:1fr;gap:44px;padding:0 16px}.bt .ph{padding:0 40px 40px 0}}
 </style>
 </head>
 <body>
@@ -104,14 +115,16 @@
   <span class="sc" aria-hidden="true"></span>
 </section>
 
-<section class="wd" id="wd"><span class="k sn">Co děláme</span><h2 id="stm">Vybíráme, ověřujeme a předáváme dál ikony luxusní módy. Kabelky, hodinky a šperky, které si zaslouží další kapitolu.</h2></section>
-<div class="do">
-  <a class="ln rv" href="maison-kategorie.html"><i class="sn">01 · Nákup</i><h3>Ověřené kousky</h3><p>Každý s certifikátem Entrupy a garancí zpětného odkupu.</p><em>Nakupovat <b>→</b></em></a>
-  <a class="ln rv" href="maison-prodat.html"><i class="sn">02 · Prodej</i><h3>Výkup, komise, výměna</h3><p>Nabídku na váš kousek dostanete do 48 hodin.</p><em>Prodat s námi <b>→</b></em></a>
-  <a class="ln rv" href="https://wa.me/420773155173" target="_blank" rel="noopener"><i class="sn">03 · Na zakázku</i><h3>Najdeme, co hledáte</h3><p>Konkrétní Birkin, Kelly nebo Rolex seženeme a ověříme.</p><em>Poslat poptávku <b>→</b></em></a>
-</div>
+<section class="story" id="story"><div class="pin">
+  <div class="stt" id="stt"><span class="k sn">Co děláme</span><h2 id="stm">Vybíráme, ověřujeme a předáváme dál ikony luxusní módy. Kabelky, hodinky a šperky, které si zaslouží další kapitolu.</h2></div>
+  <div class="cds">
+    <a class="cd" href="maison-kategorie.html"><div class="ph"><img src="img/e-birkin.webp" alt="Hermès Birkin se šátkem" loading="lazy" style="object-position:center 42%"></div><i class="sn">01 · Nákup</i><h3>Ověřené kousky</h3><p>Každý s certifikátem Entrupy a garancí zpětného odkupu.</p><span class="go"><span>Nakupovat</span><b>→</b></span></a>
+    <a class="cd" href="maison-prodat.html"><div class="ph"><img src="img/e-check.webp" alt="Ocenění kabelky" loading="lazy" style="object-position:70% 30%"></div><i class="sn">02 · Prodej</i><h3>Výkup, komise, výměna</h3><p>Nabídku na váš kousek dostanete do 48 hodin.</p><span class="go"><span>Prodat s námi</span><b>→</b></span></a>
+    <a class="cd" href="https://wa.me/420773155173" target="_blank" rel="noopener"><div class="ph"><img src="img/e-kelly.webp" alt="Kabelky Hermès Kelly" loading="lazy" style="object-position:center 45%"></div><i class="sn">03 · Na zakázku</i><h3>Najdeme, co hledáte</h3><p>Konkrétní Birkin, Kelly nebo Rolex seženeme a ověříme.</p><span class="go"><span>Poslat poptávku</span><b>→</b></span></a>
+  </div>
+</div></section>
 
-<section class="ct" style="padding-top:120px"><h2 class="rv">Nakupujte podle značky</h2></section>
+<section class="ct" style="padding-top:70px"><h2 class="rv">Nakupujte podle značky</h2></section>
 <div class="brs">
   <a class="br rv" href="maison-kategorie.html"><div class="ph"><img src="img/c-7567.webp" alt="Hermès Birkin 35" loading="lazy"></div><h3>Hermès</h3><span class="ul">Objevit</span></a>
   <a class="br rv" href="maison-kategorie.html"><div class="ph"><img src="img/c-4172.webp" alt="Chanel Chevron Flap" loading="lazy"></div><h3>Chanel</h3><span class="ul">Objevit</span></a>
@@ -141,15 +154,16 @@
   </div>
 </section>
 
-<section class="bt" id="butik">
-  <div class="ph rv"><div><img src="img/e-him.webp" alt="V butiku Unlimitage" loading="lazy"></div></div>
+<div class="btw" id="butik"><section class="bt">
+  <div class="ph rv"><div class="m"><img src="img/e-butik.webp" alt="Butik Unlimitage Na Příkopě" loading="lazy" style="object-position:center 45%"></div><div class="s"><img src="img/e-him.webp" alt="V butiku Unlimitage" loading="lazy"></div></div>
   <div>
     <span class="k sn rv">Butik v centru Prahy</span>
-    <h2 class="rv">Přijďte si svůj kousek prohlédnout osobně</h2>
+    <h2 class="rv">Vyzkoušejte si ji <i>naživo</i></h2>
+    <p class="lead rv">Stovky kousků na jednom místě. Každý si můžete vzít do ruky, prohlédnout zblízka a porovnat s ostatními.</p>
     <dl><div class="ln"><dt>Adresa</dt><dd>Na Příkopě 23, Pánská pasáž</dd></div><div class="ln"><dt>Otevřeno</dt><dd>Pondělí až sobota, 11–17</dd></div><div class="ln"><dt>Telefon</dt><dd>+420 773 155 173</dd></div><div class="ln" style="padding:0"></div></dl>
-    <div class="b rv"><a class="dsc fill" href="https://wa.me/420773155173" target="_blank" rel="noopener">Rezervovat prohlídku</a><a class="dsc" href="maison-butik.html">Více o butiku</a></div>
+    <div class="b rv"><a class="dsc fill" href="https://wa.me/420773155173" target="_blank" rel="noopener">Domluvit návštěvu</a><a class="dsc" href="maison-butik.html">Více o butiku</a></div>
   </div>
-</section>
+</section></div>
 </main>
 <section class="nl">
   <h2>Novinky z butiku</h2>
@@ -168,9 +182,15 @@
 <script src="maison.js"></script>
 <script>
 (function(){
-var st=document.getElementById('stm'),ws=st.textContent.split(' ');st.innerHTML=ws.map(function(w){return '<span>'+w+'</span>'}).join(' ');var sp=[].slice.call(st.children);
-function sw(){var r=st.getBoundingClientRect(),p=(innerHeight*.88-r.top)/(innerHeight*.55+r.height);p=p<0?0:p>1?1:p;var n=Math.round(p*sp.length);sp.forEach(function(x,i){x.classList.toggle('on',i<n)})}
-addEventListener('scroll',sw,{passive:true});sw();
+var story=document.getElementById('story'),stt=document.getElementById('stt'),st=document.getElementById('stm'),ws=st.textContent.split(' ');st.innerHTML=ws.map(function(w){return '<span>'+w+'</span>'}).join(' ');var sp=[].slice.call(st.children),cd=[].slice.call(story.querySelectorAll('.cd'));
+function cl(v){return v<0?0:v>1?1:v}function ez(v){return 1-Math.pow(1-v,3)}
+function run(){if(innerWidth<=900||matchMedia('(prefers-reduced-motion:reduce)').matches){sp.forEach(function(x){x.classList.add('on')});return}
+  var r=story.getBoundingClientRect(),vh=innerHeight,p=cl(-r.top/(r.height-vh)),pre=cl((vh-r.top)/vh);
+  var n=Math.round(cl((pre-.55)/.45*.25+p/.34*.75)*sp.length);sp.forEach(function(x,i){x.classList.toggle('on',i<n)});
+  var e=ez(cl((p-.36)/.24)),dy=-(vh/2-(48+vh*.045))*e;
+  stt.style.transform='translateY(calc('+(-50*(1-e))+'% + '+dy+'px)) scale('+(1-.5*e)+')';
+  cd.forEach(function(c,i){var t=ez(cl((p-.46-i*.1)/.3));c.style.opacity=t;c.style.transform='translateY('+((1-t)*vh*.35)+'px)'})}
+addEventListener('scroll',run,{passive:true});addEventListener('resize',run);run();
 })();
 </script>
 </body>

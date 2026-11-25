@@ -158,7 +158,7 @@
   <div class="ph rv"><div class="m"><img src="img/e-butik.webp" alt="Butik Unlimitage Na Příkopě" loading="lazy" style="object-position:center 45%"></div><div class="s"><img src="img/e-him.webp" alt="V butiku Unlimitage" loading="lazy"></div></div>
   <div>
     <span class="k sn rv">Butik v centru Prahy</span>
-    <h2 class="rv">Vyzkoušejte si ji <i>naživo</i></h2>
+    <h2 class="rv">Přijďte si vše vyzkoušet <i>naživo</i></h2>
     <p class="lead rv">Stovky kousků na jednom místě. Každý si můžete vzít do ruky, prohlédnout zblízka a porovnat s ostatními.</p>
     <dl><div class="ln"><dt>Adresa</dt><dd>Na Příkopě 23, Pánská pasáž</dd></div><div class="ln"><dt>Otevřeno</dt><dd>Pondělí až sobota, 11–17</dd></div><div class="ln"><dt>Telefon</dt><dd>+420 773 155 173</dd></div><div class="ln" style="padding:0"></div></dl>
     <div class="b rv"><a class="dsc fill" href="https://wa.me/420773155173" target="_blank" rel="noopener">Domluvit návštěvu</a><a class="dsc" href="maison-butik.html">Více o butiku</a></div>
@@ -188,7 +188,7 @@ function run(){if(innerWidth<=900||matchMedia('(prefers-reduced-motion:reduce)')
   var r=story.getBoundingClientRect(),vh=innerHeight,p=cl(-r.top/(r.height-vh)),pre=cl((vh-r.top)/vh);
   var n=Math.round(cl((pre-.55)/.45*.25+p/.34*.75)*sp.length);sp.forEach(function(x,i){x.classList.toggle('on',i<n)});
   var e=ez(cl((p-.36)/.24)),dy=-(vh/2-(48+vh*.045))*e;
-  stt.style.transform='translateY(calc('+(-50*(1-e))+'% + '+dy+'px)) scale('+(1-.5*e)+')';
+  stt.style.transform='translateY(calc('+(-50*(1-e))+'% + '+dy+'px)) scale('+(1-.38*e)+')';
   cd.forEach(function(c,i){var t=ez(cl((p-.46-i*.1)/.3));c.style.opacity=t;c.style.transform='translateY('+((1-t)*vh*.35)+'px)'})}
 addEventListener('scroll',run,{passive:true});addEventListener('resize',run);run();
 })();

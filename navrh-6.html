@@ -58,13 +58,24 @@
 .br h3{margin:22px 0 10px;font-family:'Montserrat',sans-serif;font-weight:500;font-size:15px;letter-spacing:.1em;text-transform:uppercase}
 .more{text-align:center;margin-top:54px}
 
-.numw{background:#111;color:#F1E6D6;margin-top:120px;padding:84px 0 78px}
-.numw .k{display:block;text-align:center;font-size:11.5px;color:#B9A892;margin-bottom:46px}
-.num{display:grid;grid-template-columns:repeat(4,1fr);max-width:1240px;margin:0 auto;padding:0 40px}
-.num div{text-align:center;padding:10px 20px;border-right:1px solid rgba(241,230,214,.2)}
-.num div:last-child{border-right:0}
-.num b{display:block;font-weight:400;font-size:clamp(44px,5vw,80px);line-height:1;margin-bottom:20px;white-space:nowrap;letter-spacing:0}
-.num span{font-size:11px;color:#D8C9B5;line-height:1.6;display:block}
+.numw{position:relative;height:300vh;background:#0D0C0B;color:#F1E6D6;margin-top:120px}
+.numw .pin{position:sticky;top:0;height:100vh;overflow:hidden}
+.numw video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.34}
+.numw .pin:after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 60% 50%,rgba(13,12,11,.2),rgba(13,12,11,.88) 75%)}
+.nin{position:absolute;z-index:2;inset:0;display:grid;grid-template-columns:300px 1fr;gap:40px;max-width:1240px;margin:0 auto;padding:48px 40px 0;align-items:center}
+.nl2{position:relative;padding-left:26px}
+.nl2:before{content:'';position:absolute;left:0;top:0;bottom:0;width:1px;background:rgba(241,230,214,.22)}
+.nl2 .bar2{position:absolute;left:0;top:0;width:1px;height:100%;background:#F1E6D6;transform-origin:top;transform:scaleY(0)}
+.nl2 .k{display:block;font-size:11px;color:#B9A892;margin-bottom:30px}
+.nl2 a{display:block;font-family:'Montserrat',sans-serif;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:500;padding:11px 0;color:rgba(241,230,214,.36);transition:color .6s,transform .6s var(--ease)}
+.nl2 a.on{color:#F1E6D6;transform:translateX(8px)}
+.nst{position:relative;height:60vh}
+.sl{position:absolute;left:0;right:0;top:50%;text-align:center;opacity:0;will-change:transform,opacity}
+.sl b{display:block;font-weight:400;font-size:clamp(110px,16vw,270px);line-height:.9;letter-spacing:-.02em;white-space:nowrap;font-variant-numeric:tabular-nums}
+.sl b small{font-size:.26em;letter-spacing:0;margin-left:.12em}
+.sl h3{margin:34px 0 12px;font-family:'Montserrat',sans-serif;font-weight:500;font-size:14px;letter-spacing:.14em;text-transform:uppercase}
+.sl p{margin:0 auto;max-width:440px;font-size:19px;line-height:1.5;color:#D8C9B5}
+.ncnt{position:absolute;z-index:2;right:40px;bottom:34px;font-size:11px;color:#B9A892}
 .srv{max-width:1240px;margin:70px auto 0;padding:0 40px}
 .sr{position:relative;display:grid;grid-template-columns:70px 300px 1fr auto;gap:24px;align-items:center;padding:30px 20px;overflow:hidden}
 .sr:after{content:'';position:absolute;inset:0;background:var(--tile);transform:scaleX(0);transform-origin:left;transition:transform 1.4s var(--ease);z-index:-1}
@@ -92,7 +103,7 @@
 .bt dt{font-family:'Montserrat',sans-serif;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);align-self:center}
 .bt dd{margin:0}
 .bt .b{display:flex;gap:10px;flex-wrap:wrap}
-@media (max-width:900px){.story{height:auto}.story .pin{position:static;height:auto;overflow:visible;padding:80px 0 0}.stt{position:static;transform:none!important;padding:0 20px}.stt h2 span{opacity:1}.cds{position:static;grid-template-columns:1fr;gap:44px;padding:0 16px;margin-top:50px}.cd{transform:none!important;opacity:1!important}.cd .ph{height:56vw}.brs{grid-template-columns:1fr 1fr;gap:26px 14px;padding:0 16px}.numw{margin-top:80px;padding:60px 0}.num{grid-template-columns:1fr 1fr;padding:0 16px;gap:40px 0}.num div:nth-child(2){border-right:0}.srv{padding:0 16px}.sr{grid-template-columns:36px 1fr auto;gap:12px;padding:24px 6px}.sr p{grid-column:2/3;grid-row:2}.sr em{grid-row:1/3;grid-column:3}.btw{margin-top:80px;padding:60px 0}.bt{grid-template-columns:1fr;gap:44px;padding:0 16px}.bt .ph{padding:0 40px 40px 0}}
+@media (max-width:900px){.story{height:auto}.story .pin{position:static;height:auto;overflow:visible;padding:80px 0 0}.stt{position:static;transform:none!important;padding:0 20px}.stt h2 span{opacity:1}.cds{position:static;grid-template-columns:1fr;gap:44px;padding:0 16px;margin-top:50px}.cd{transform:none!important;opacity:1!important}.cd .ph{height:56vw}.brs{grid-template-columns:1fr 1fr;gap:26px 14px;padding:0 16px}.numw{height:auto;margin-top:80px}.numw .pin{position:relative;height:auto;padding:70px 0}.nin{position:relative;display:block;padding:0 20px}.nl2,.ncnt{display:none}.nst{height:auto;display:grid;gap:60px}.sl{position:static;opacity:1!important;transform:none!important}.sl b{font-size:22vw}.srv{padding:0 16px}.sr{grid-template-columns:36px 1fr auto;gap:12px;padding:24px 6px}.sr p{grid-column:2/3;grid-row:2}.sr em{grid-row:1/3;grid-column:3}.btw{margin-top:80px;padding:60px 0}.bt{grid-template-columns:1fr;gap:44px;padding:0 16px}.bt .ph{padding:0 40px 40px 0}}
 </style>
 </head>
 <body>
@@ -137,12 +148,18 @@
 <div class="more rv"><a class="dsc" href="maison-kategorie.html">Zobrazit celou kolekci</a></div>
 
 <section id="sluzby">
-  <div class="numw"><span class="k sn">Proč nakupovat u nás</span>
-  <div class="num">
-    <div><b data-count="99.1" data-suf=" %">99,1 %</b><span class="sn">Přesnost ověření<br>Entrupy</span></div>
-    <div><b data-count="48" data-suf=" h">48 h</b><span class="sn">Nabídka na<br>vaši kabelku</span></div>
-    <div><b data-count="12" data-suf=" měsíců">12 měsíců</b><span class="sn">Garance zpětného<br>odkupu</span></div>
-    <div><b data-count="10" data-pre="+" data-suf=" %">+10 %</b><span class="sn">Bonus<br>při výměně</span></div>
+  <div class="numw" id="numw"><div class="pin">
+    <video autoplay muted loop playsinline preload="metadata"><source src="https://videos.pexels.com/video-files/7677321/7677321-hd_1920_1080_25fps.mp4" type="video/mp4"></video>
+    <div class="nin">
+      <div class="nl2"><i class="bar2" id="nbar"></i><span class="k sn">Proč nakupovat u nás</span><a>Ověřená pravost</a><a>Rychlá nabídka</a><a>Garance odkupu</a><a>Bonus při výměně</a></div>
+      <div class="nst">
+        <div class="sl" data-v="99.1" data-d="1"><b><span>99,1</span><small>%</small></b><h3>Přesnost ověření Entrupy</h3><p>Každý kousek kontrolujeme ručně v butiku a ověřujeme technologií Entrupy.</p></div>
+        <div class="sl" data-v="48" data-d="0"><b><span>48</span><small>h</small></b><h3>Nabídka na váš kousek</h3><p>Pošlete fotky a do dvou dnů víte, kolik za něj dostanete.</p></div>
+        <div class="sl" data-v="12" data-d="0"><b><span>12</span><small>měsíců</small></b><h3>Garance zpětného odkupu</h3><p>Vybrané kousky od vás odkoupíme zpět za předem danou cenu.</p></div>
+        <div class="sl" data-v="10" data-d="0" data-pre="+"><b><span>+10</span><small>%</small></b><h3>Bonus při výměně</h3><p>Při výměně za kredit přidáme k ocenění deset procent navíc.</p></div>
+      </div>
+    </div>
+    <span class="ncnt sn" id="ncnt">01 / 04</span>
   </div></div>
   <div class="srv">
     <a class="sr ln" href="maison-prodat.html"><i class="sn">01</i><h3>Výkup a komise</h3><p>Peníze ihned, nebo vyšší částka v komisním prodeji.</p><em>→</em></a>
@@ -191,6 +208,17 @@ function run(){if(innerWidth<=900||matchMedia('(prefers-reduced-motion:reduce)')
   stt.style.transform='translateY(calc('+(-50*(1-e))+'% + '+dy+'px)) scale('+(1-.38*e)+')';
   cd.forEach(function(c,i){var t=ez(cl((p-.46-i*.1)/.3));c.style.opacity=t;c.style.transform='translateY('+((1-t)*vh*.35)+'px)'})}
 addEventListener('scroll',run,{passive:true});addEventListener('resize',run);run();
+var nw=document.getElementById('numw'),sl=[].slice.call(nw.querySelectorAll('.sl')),nv=[].slice.call(nw.querySelectorAll('.nl2 a')),nb=document.getElementById('nbar'),nc=document.getElementById('ncnt'),N=sl.length;
+function fmt(el,k){var v=parseFloat(el.dataset.v)*k,d=+el.dataset.d;el.querySelector('span').textContent=(el.dataset.pre||'')+v.toFixed(d).replace('.',',')}
+function num(){if(innerWidth<=900||matchMedia('(prefers-reduced-motion:reduce)').matches){sl.forEach(function(e){fmt(e,1)});return}
+  var r=nw.getBoundingClientRect(),vh=innerHeight,p=cl(-r.top/(r.height-vh)),f=Math.min(N-.0001,p*N),a=Math.floor(f),l=f-a;
+  if(r.top>0){a=0;l=cl(1-r.top/(vh*.6))*.25}
+  sl.forEach(function(e,i){var o=0,y=0;
+    if(i===a){var fin=cl(l/.22),fout=(i===N-1)?0:cl((l-.84)/.16);o=fin*(1-fout);y=(1-ez(fin))*70-fout*70;fmt(e,ez(cl(l/.6)))}
+    else{y=i<a?-70:70;}
+    e.style.opacity=o;e.style.transform='translateY(calc(-50% + '+y+'px))'});
+  nv.forEach(function(x,i){x.classList.toggle('on',i===a)});nb.style.transform='scaleY('+p+')';nc.textContent='0'+(a+1)+' / 0'+N}
+addEventListener('scroll',num,{passive:true});addEventListener('resize',num);num();
 })();
 </script>
 </body>
